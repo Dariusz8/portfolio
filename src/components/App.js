@@ -1,12 +1,11 @@
 import React from "react";
+import Header from "./Header";
 
 function App() {
   return (
-    <div class="container-fluid">
-      <h1>hello</h1>
-      <p>this is a</p>
-    </div>
+  
+    <Header/>
+
   );
 }
-
 export default App;
