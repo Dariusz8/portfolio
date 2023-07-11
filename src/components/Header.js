@@ -27,7 +27,7 @@ const Header = () =>{
 const HeadTopContainer = styled.div`
 width:100vw;
 height:13vh;
-border:solid 1px red;
+//border:solid 1px red;
 position:fixed;
 left:0px;
 top:0px;
