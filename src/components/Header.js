@@ -46,16 +46,28 @@ column-gap:7vw;
 position: fixed;
 right:5vw;
 top:5vh;
-
+//border:solid 5px red;
 `
 const Linkedin = styled.p`
 font-size:22px;
+
+&:hover{
+    font-size:28px;
+}
 `
 const Github = styled.p`
 font-size:22px;
+
+&:hover{
+    font-size:28px;
+}
 `
 const Email = styled.p`
 font-size:22px;
+
+&:hover{
+    font-size:28px;
+}
 `
 
 export default Header

@@ -14,8 +14,12 @@ const About = () => {
 
 const AboutHeader = styled.h1`
 `
-
 const AllAboutContent = styled.div`
+width:100vw;
+height:73vh;
+//border: solid 5px purple;
+position: fixed;
+top:27vh;
 `
 
 const AboutText = styled.div`
