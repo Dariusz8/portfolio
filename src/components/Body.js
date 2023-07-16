@@ -79,7 +79,7 @@ ${underlineAnimation}
 }
 `
 const AboutSection = styled.div`
-width:50vw;
+width:48vw;
 height:87vh;
 //border: solid 5px purple;
 position: fixed;
