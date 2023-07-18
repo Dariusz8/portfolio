@@ -23,7 +23,7 @@ left:50vw;
 top:27vh;
 `
 
-const AboutText = styled.div`
+const AboutText = styled.p`
 `
 
 export default About

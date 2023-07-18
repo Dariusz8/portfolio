@@ -1,23 +1,52 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import About from "./About";
-import { useState } from "react";
-
+import Skills from "./Skills";
 
 const Body = () => {
     const [AboutActive, setAboutActive] = useState(true);
     const [ProjectsActive, setProjectsActive] = useState(false);
     const [SkillsActive, setSkillsActive] = useState(false);
+
+    const handleAboutClick = () => {
+        setAboutActive(true);
+        setProjectsActive(false);
+        setSkillsActive(false);
+    };
+    
+    const handleProjectsClick = () => {
+        setAboutActive(false);
+        setProjectsActive(true);
+        setSkillsActive(false);
+    };
+    
+    const handleSkillsClick = () => {
+        setAboutActive(false);
+        setProjectsActive(false);
+        setSkillsActive(true);
+    };
+
     return(
         <DaBody>
         <ButtonsRow>
-            <AboutButton>About</AboutButton>
-            <ProjectsButton>Projects</ProjectsButton>
-            <SkillsButton>Skills</SkillsButton>
+            <AboutButton onClick={handleAboutClick}>About</AboutButton>
+            <ProjectsButton onClick={handleProjectsClick}>Projects</ProjectsButton>
+            <SkillsButton onClick={handleSkillsClick}>Skills</SkillsButton>
         </ButtonsRow>
         <WholeContent>
             <AboutSection>
-                <About/>
+                {
+                    AboutActive &&
+                    <About/>
+                }
+                {
+                    ProjectsActive &&
+                    <div></div>
+                }
+                {
+                    SkillsActive &&
+                    <Skills/>
+                }
             </AboutSection>
         </WholeContent>
         </DaBody>

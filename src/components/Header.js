@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import styled  from "styled-components";
 import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
 import { Navigate } from "react-router-dom";
-import { useState } from "react";
 
 
 
