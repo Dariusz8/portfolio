@@ -7,6 +7,11 @@ const Body = () => {
     const [AboutActive, setAboutActive] = useState(true);
     const [ProjectsActive, setProjectsActive] = useState(false);
     const [SkillsActive, setSkillsActive] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckMode = () =>{
+        setIsChecked(!isChecked);
+    }
 
     const handleAboutClick = () => {
         setAboutActive(true);
@@ -49,6 +54,12 @@ const Body = () => {
                 }
             </AboutSection>
         </WholeContent>
+        <CheckModeContainer>
+            <CheckModeButton checked={isChecked} onChange={handleCheckMode} />
+            <CheckModeSlider>
+                <CheckModeSliderDot />
+            </CheckModeSlider>
+        </CheckModeContainer>
         </DaBody>
     )
 }
@@ -137,5 +148,41 @@ ${underlineAnimation}
     cursor:pointer;
 }
 `
+const CheckModeContainer = styled.div`
+position:fixed;
+top:2vh;
+right:2vw;
+display:flex;
+align-items: center;
+z-index:10;
+`
+const CheckModeSlider = styled.label`
+position: relative;
+display: inline-block;
+width:4vw;
+height:2vh;
+background-color: #ccc;
+border-radius: 20px;
+transition:background-color 0.3s;
+`
+const CheckModeButton = styled.input.attrs({type:"checkbox"})`
+display:none;
+
+&:checked + ${CheckModeSlider}{
+    background-color: #2196f3;
+}
+
+&:checked + ${CheckModeSlider}::before{
+    transform: translateX(2vw);
+}`
+const CheckModeSliderDot = styled.span`
+position:absolute;
+width:17px;
+height:17px;
+border-radius: 50%;
+background-color:white;
+top:1px;
+left:1px;
+transition: transform 0.3s;`
 
 export default Body;

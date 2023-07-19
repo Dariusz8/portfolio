@@ -1,23 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 import styled  from "styled-components";
 import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
-import { Navigate } from "react-router-dom";
-
-
 
 const Header = () =>{
-    const [Linked, setLinked] = useState(false);
-    const [Gitted, setGitted] = useState(false);
-    const [Emailed, setEmailed] = useState(false);
     return(
         <HeadTopContainer>
             <HeadName>Dariusz Czeczuk</HeadName>
             <HeadLinks>
-                <Linkedin><FiLinkedin/></Linkedin>
-                <Github><FiGithub/></Github>
-                <Email><TfiEmail/></Email>
+                <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
+                <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
+                <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
             </HeadLinks>
         </HeadTopContainer>
     )
@@ -44,7 +38,7 @@ flex-direction:row;
 column-gap:7vw;
 position: fixed;
 right:5vw;
-top:5vh;
+top:5vh; 
 //border:solid 5px red;
 `
 const Linkedin = styled.p`
@@ -67,6 +61,10 @@ font-size:22px;
 &:hover{
     font-size:28px;
 }
+`
+const HeadLink = styled.a`
+color:inherit;
+text-decoration: none;
 `
 
 export default Header
