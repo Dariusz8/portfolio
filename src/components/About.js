@@ -16,7 +16,7 @@ const AboutHeader = styled.h1`
 `
 const AllAboutContent = styled.div`
 width:48vw;
-height:87vh;
+height:70vh;
 //border: solid 5px purple;
 position: fixed;
 left:50vw;
@@ -24,6 +24,7 @@ top:27vh;
 `
 
 const AboutText = styled.p`
+text-indent: 3vh;
 `
 
 export default About

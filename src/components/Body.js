@@ -53,14 +53,15 @@ const Body = () => {
                     <Skills/>
                 }
             </AboutSection>
+            <CheckModeContainer>
+                <CheckModeButton checked={isChecked} onChange={handleCheckMode} />
+                <CheckModeSlider>
+                    <CheckModeSliderDot />
+                </CheckModeSlider>
+            </CheckModeContainer>
         </WholeContent>
-        <CheckModeContainer>
-            <CheckModeButton checked={isChecked} onChange={handleCheckMode} />
-            <CheckModeSlider>
-                <CheckModeSliderDot />
-            </CheckModeSlider>
-        </CheckModeContainer>
         </DaBody>
+        
     )
 }
 
@@ -69,6 +70,8 @@ width:100vw;
 height:87vh;
 position: fixed;
 top:13vh;
+background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
 //border: solid 6px yellowgreen;
 `
 const WholeContent = styled.div`

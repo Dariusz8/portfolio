@@ -45,21 +45,21 @@ const Linkedin = styled.p`
 font-size:22px;
 
 &:hover{
-    font-size:28px;
+    scale:2;
 }
 `
 const Github = styled.p`
 font-size:22px;
 
 &:hover{
-    font-size:28px;
+    scale:2;
 }
 `
 const Email = styled.p`
 font-size:22px;
 
 &:hover{
-    font-size:28px;
+    scale:2;
 }
 `
 const HeadLink = styled.a`

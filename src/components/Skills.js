@@ -4,22 +4,45 @@ import styled from "styled-components";
 const Skills = () =>{
     return(
         <AllSkillsContent>
-            <SkillsText>
-                React
-            </SkillsText>
+            <SkillsList>
+                <SkillsText>JavaScript</SkillsText>
+                <SkillsText>React</SkillsText>
+                <SkillsText>CSS</SkillsText>
+                <SkillsText>HTML</SkillsText>
+                <SkillsText>Node.js</SkillsText>
+                <SkillsText>MongoDB</SkillsText>
+                <SkillsText>Python</SkillsText>
+                <SkillsText>R</SkillsText>
+            </SkillsList>
         </AllSkillsContent>
     )
 }
 
 const AllSkillsContent = styled.div`
 width:48vw;
-height:87vh;
+height:30vh;
 //border: solid 5px purple;
+overflow-y:scroll;
 position: fixed;
 left:50vw;
-top:27vh;
+top:40vh;
+text-align: center;
+transform-style: preserve-3d;
+z-index: 100;
+`
+const SkillsList = styled.div`
+//list-style: none;
+padding:0px;
+margin:0px;
+transform-style: preserve-3d;
+transform-origin: 50% 50%;
+transition: transform 0.5 ease;
+transform: rotateX(-20deg) translateZ(-100px)
 `
 const SkillsText = styled.p`
+margin: 5vh 0 5vh 0;
+font-size:18px;
+transform: rotateX(20deg);
 `
 
 export default Skills;
