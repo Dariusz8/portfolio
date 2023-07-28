@@ -28,9 +28,10 @@ background-color: transparent;
 color:rgb(0,150,0);
 `
 const HeadName = styled.h1`
-font-size: 36px;
+font-size: 42px;
 font-style: italic;
 margin-left:5vw;
+text-shadow: 1vh 1vw;
 `
 const HeadLinks = styled.div`
 display:flex;

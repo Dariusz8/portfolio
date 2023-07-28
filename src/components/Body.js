@@ -65,14 +65,16 @@ const Body = () => {
     )
 }
 
+export default Body;
+
 const DaBody = styled.div`
 width:100vw;
 height:87vh;
 position: fixed;
 top:13vh;
-background: rgb(255,255,255);
+//color: ${(props) => (props.isChecked ? "white" : "black")};
+//background: ${(props) => (props.isChecked ? "white" : "black")};
 background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
-//border: solid 6px yellowgreen;
 `
 const WholeContent = styled.div`
 width:100vw;
@@ -162,23 +164,16 @@ z-index:10;
 const CheckModeSlider = styled.label`
 position: relative;
 display: inline-block;
-width:4vw;
+width:5vw;
 height:2vh;
 background-color: #ccc;
 border-radius: 20px;
 transition:background-color 0.3s;
+cursor:pointer;
+z-index:10;
 `
-const CheckModeButton = styled.input.attrs({type:"checkbox"})`
-display:none;
-
-&:checked + ${CheckModeSlider}{
-    background-color: #2196f3;
-}
-
-&:checked + ${CheckModeSlider}::before{
-    transform: translateX(2vw);
-}`
 const CheckModeSliderDot = styled.span`
+z-index:10;
 position:absolute;
 width:17px;
 height:17px;
@@ -186,6 +181,20 @@ border-radius: 50%;
 background-color:white;
 top:1px;
 left:1px;
-transition: transform 0.3s;`
+//transition: transform  ease-in-out 0.3s;
+`
+const CheckModeButton = styled.input.attrs({type:"checkbox"})`
+display:none;
+z-index:10;
 
-export default Body;
+&:checked + ${CheckModeSlider}{
+    background-color: #2196f3;
+}
+
+&:checked + ${CheckModeSliderDot}{
+    top:1px;
+    right:1px;
+ //transform: translateX(4vw);
+ //transition: transform ease-in-out 0.3s;
+}
+`

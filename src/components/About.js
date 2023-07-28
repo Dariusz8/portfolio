@@ -20,7 +20,7 @@ height:70vh;
 //border: solid 5px purple;
 position: fixed;
 left:50vw;
-top:27vh;
+top:37vh;
 `
 
 const AboutText = styled.p`
