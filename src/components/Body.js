@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
+import Solo from "./Solo";
 
 const Body = () => {
     const [AboutActive, setAboutActive] = useState(true);
@@ -53,6 +54,7 @@ const Body = () => {
                     <Skills/>
                 }
             </AboutSection>
+            <Solo/>
             <CheckModeContainer>
                 <CheckModeButton checked={isChecked} onChange={handleCheckMode} />
                 <CheckModeSlider>
