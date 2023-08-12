@@ -1,83 +1,74 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const divideAnimation = keyframes`
-0%{
-    transform: scale(1);
-}
-25%{
-    transform: scale(0.5) translate(-50%, -50%);
-}
-50%{
-    transform: scale(0.5) translate(0, -50%);
-}
-75%{
-    transform: scale(0.5) translateY(-50%, 0);
-}
-100%{
-    transform: scale(1);
-}`
 
 const Solo = () =>{
     return(
-            <Circle>
-                <TopLeft/>
-                <TopRight/>
-                <BottomLeft/>
-                <BottomRight/>
-            </Circle>
+       <Container>
+        <TopLeft/>
+        <TopRight/>
+        <BottomLeft/>
+        <BottomRight/>
+       </Container>
     )
 }
 
-
-const Circle = styled.div`
-top:0;
-left:10vw;
-width:500px;
-height:500px;
-//border: red 5px solid;
-background-color: transparent;
-position:relative;
-animation: ${divideAnimation} 4s infinite;
+const Container = styled.div`
+position: fixed;
+top:28vh;
+left:1vw;
+width:48vw;
+height:70vh;
+//background-color: transparent;
+//border: solid red 5px;
 `
-const Piece = styled.div`
-position:absolute;
-width:50%;
-height:50%;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-`
-const TopLeft = styled(Piece)`
-top:0;
-left:0;
+const TopLeft = styled.div`
+position: fixed;
+top:45%;
+left:17%;
+width:100px;
+height:100px;
+border-radius: 50% 0 0 0;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
-background-size: 200% 200%;
-background-position: top left;
-transform-origin: top left;
+background-clip: content-box;
+background-position-x: 30%;
+background-position-y: 17%;
 `
-const TopRight = styled(Piece)`
-top:0;
-left:50%;
+const TopRight = styled.div`
+position: fixed;
+top:45%;
+left:23.9%;
+width:100px;
+height:100px;
+border-radius: 0 50% 0 0;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
-background-size: 200% 200%;
-background-position: top right;
-transform-origin: top right;
+background-clip: content-box;
+background-position-x: 57%;
+background-position-y: 17%;
 `
-const BottomLeft = styled(Piece)`
-top:50%;
-left:0;
+const BottomLeft = styled.div`
+position: fixed;
+top: 57.3%;
+left:17%;
+width:100px;
+height:100px;
+border-radius: 0 0 0 50% ;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
-background-size: 200% 200%;
-background-position: bottom left;
-transform-origin: bottom left;
+background-clip: content-box;
+background-position-x: 30%;
+background-position-y: 45%;
 `
-const BottomRight = styled(Piece)`
-top:50%;
-left:50%;
+const BottomRight = styled.div`
+position: fixed;
+top:57.3%;
+left:23.9%;
+width:100px;
+height:100px;
+border-radius: 0 0 50% 0;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
-background-size: 200% 200%;
-background-position: bottom right;
-transform-origin: bottom right;
+background-clip: content-box;
+background-position-x: 57%;
+background-position-y: 45%;
 `
-
 
 export default Solo;
