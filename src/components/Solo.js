@@ -66,7 +66,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 30%;
 background-position-y: 17%;
-animation: ${topLeftAnimation} 3s infinite;
+animation: ${topLeftAnimation} 3s alternate-reverse infinite;
 `
 const TopRight = styled.div`
 position: fixed;
@@ -79,7 +79,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 57%;
 background-position-y: 17%;
-animation: ${topRightAnimation} 3s infinite;
+animation: ${topRightAnimation} 3s alternate-reverse infinite;
 `
 const BottomLeft = styled.div`
 position: fixed;
@@ -92,7 +92,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 30%;
 background-position-y: 45%;
-animation: ${bottomLeftAnimation} 3s infinite;
+animation: ${bottomLeftAnimation} 3s alternate-reverse infinite;
 `
 const BottomRight = styled.div`
 position: fixed;
@@ -105,7 +105,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 57%;
 background-position-y: 45%;
-animation: ${bottomRightAnimation} 3s infinite;
+animation: ${bottomRightAnimation} 3s alternate-reverse infinite;
 `
 
 export default Solo;
