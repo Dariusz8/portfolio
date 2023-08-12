@@ -3,6 +3,7 @@ import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
 import Solo from "./Solo";
+import Projects from "./Projects";
 
 const Body = () => {
     const [AboutActive, setAboutActive] = useState(true);
@@ -47,7 +48,7 @@ const Body = () => {
                 }
                 {
                     ProjectsActive &&
-                    <div></div>
+                    <Projects/>
                 }
                 {
                     SkillsActive &&

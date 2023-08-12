@@ -13,6 +13,39 @@ const Solo = () =>{
     )
 }
 
+const topLeftAnimation = keyframes`
+    0% {
+        transform: translate(-20px, -20px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+`;
+const topRightAnimation = keyframes`
+    0% {
+        transform: translate(20px, -20px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(-360deg);
+    }
+`;
+const bottomLeftAnimation = keyframes`
+    0% {
+        transform: translate(-20px, 20px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+`;
+const bottomRightAnimation = keyframes`
+    0% {
+        transform: translate(20px, 20px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(-360deg);
+    }
+`;
+
 const Container = styled.div`
 position: fixed;
 top:28vh;
@@ -33,6 +66,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 30%;
 background-position-y: 17%;
+animation: ${topLeftAnimation} 3s infinite;
 `
 const TopRight = styled.div`
 position: fixed;
@@ -45,6 +79,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 57%;
 background-position-y: 17%;
+animation: ${topRightAnimation} 3s infinite;
 `
 const BottomLeft = styled.div`
 position: fixed;
@@ -57,6 +92,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 30%;
 background-position-y: 45%;
+animation: ${bottomLeftAnimation} 3s infinite;
 `
 const BottomRight = styled.div`
 position: fixed;
@@ -69,6 +105,7 @@ background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 57%;
 background-position-y: 45%;
+animation: ${bottomRightAnimation} 3s infinite;
 `
 
 export default Solo;
