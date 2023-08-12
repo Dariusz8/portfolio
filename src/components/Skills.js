@@ -38,7 +38,7 @@ margin:0px;
 transform-style: preserve-3d;
 transform-origin: 50% 50%;
 transition: transform 0.5 ease;
-transform: rotateX(-20deg) translateZ(-100px)
+transform: rotateX(-20deg) translateZ(-100px);
 `
 const SkillsText = styled.p`
 margin: 5vh 0 5vh 0;
