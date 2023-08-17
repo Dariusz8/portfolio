@@ -4,15 +4,24 @@ import About from "./About";
 import Skills from "./Skills";
 import Solo from "./Solo";
 import Projects from "./Projects";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillSunFill } from "react-icons/bs";
 
 const Body = () => {
     const [AboutActive, setAboutActive] = useState(true);
     const [ProjectsActive, setProjectsActive] = useState(false);
     const [SkillsActive, setSkillsActive] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
+    const [nightOn, setNightOn] = useState(false);
+    const [sunOn, setSunOn] = useState(true);
+ 
+    const handleDarkMode = () => {
+        setNightOn(true);
+        setSunOn(false);
+    }
 
-    const handleCheckMode = () =>{
-        setIsChecked(!isChecked);
+    const handleSunMode = () => {
+        setSunOn(true);
+        setNightOn(false);
     }
 
     const handleAboutClick = () => {
@@ -35,12 +44,20 @@ const Body = () => {
 
     return(
         <DaBody>
-        <ButtonsRow>
-            <AboutButton onClick={handleAboutClick}>About</AboutButton>
-            <ProjectsButton onClick={handleProjectsClick}>Projects</ProjectsButton>
-            <SkillsButton onClick={handleSkillsClick}>Skills</SkillsButton>
-        </ButtonsRow>
-        <WholeContent>
+            {
+                sunOn &&
+                <WholeScreen>
+                <ButtonsRow>
+                    <AboutButton onClick={handleAboutClick}>About</AboutButton>
+                    <ProjectsButton onClick={handleProjectsClick}>Projects</ProjectsButton>
+                    <SkillsButton onClick={handleSkillsClick}>Skills</SkillsButton>
+                </ButtonsRow>
+
+                <ModeButton onClick={handleDarkMode}>
+                <BsFillMoonStarsFill/>
+                </ModeButton>
+
+                <WholeContent>
             <AboutSection>
                 {
                     AboutActive &&
@@ -56,13 +73,40 @@ const Body = () => {
                 }
             </AboutSection>
             <Solo/>
-            <CheckModeContainer>
-                <CheckModeButton checked={isChecked} onChange={handleCheckMode} />
-                <CheckModeSlider>
-                    <CheckModeSliderDot />
-                </CheckModeSlider>
-            </CheckModeContainer>
         </WholeContent>
+                </WholeScreen>
+            }
+
+            {nightOn &&
+            <WholeScreen>
+                <ButtonsRow className="lightItUp">
+                    <AboutButton onClick={handleAboutClick} className="lightItUp">About</AboutButton>
+                    <ProjectsButton onClick={handleProjectsClick} className="lightItUp">Projects</ProjectsButton>
+                    <SkillsButton onClick={handleSkillsClick} className="lightItUp">Skills</SkillsButton>
+                </ButtonsRow>
+
+                <ModeButton onClick={handleSunMode} className="lightItUp">
+                <BsFillSunFill/>
+                </ModeButton>
+
+                <WholeContent className="lightItUp">
+            <AboutSection className="lightItUp">
+                {
+                    AboutActive &&
+                    <About/>
+                }
+                {
+                    ProjectsActive &&
+                    <Projects/>
+                }
+                {
+                    SkillsActive &&
+                    <Skills/>
+                }
+            </AboutSection>
+            <Solo/>
+        </WholeContent>
+            </WholeScreen>}
         </DaBody>
         
     )
@@ -70,13 +114,41 @@ const Body = () => {
 
 export default Body;
 
+const WholeScreen = styled.div`
+    width:100vw;
+    height:100vh; 
+    .lightItUp{
+        color:white;
+        background-color: black;
+    }
+    `
+
+const ModeButton = styled.button`
+    background-color: transparent;
+    color: black;
+    width:3vw;
+    height:3vh;
+    position: fixed;
+    top:1vh;
+    right:1vw;
+    border:none;
+    font-size:2em;
+
+    &:hover{
+        cursor:pointer;
+    }
+
+    .lightItUp{
+        color:white;
+        background-color: black;
+    }
+`
+
 const DaBody = styled.div`
 width:100vw;
 height:87vh;
 position: fixed;
 top:13vh;
-//color: ${(props) => (props.isChecked ? "white" : "black")};
-//background: ${(props) => (props.isChecked ? "white" : "black")};
 background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
 `
 const WholeContent = styled.div`
@@ -87,6 +159,11 @@ position: fixed;
 top:25vh;
 display:flex;
 align-items: center;
+
+.lightItUp{
+    color:white;
+    background-color: black;
+}
 `
 const ButtonsRow = styled.div`
 position:fixed;
@@ -96,6 +173,10 @@ display: flex;
 justify-content: space-evenly;
 z-index: 1;
 //border: solid 5px orange;
+.lightItUp{
+    color:white;
+    background-color: black;
+}
 `
 const underlineAnimation = `
 position: relative;
@@ -125,6 +206,10 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
+.lightItUp{
+        color:white;
+        background-color: black;
+    }
 `
 const AboutSection = styled.div`
 width:48vw;
@@ -135,6 +220,10 @@ top:13vh;
 left:50vw;
 display:flex;
 align-items: center;
+.lightItUp{
+        color:white;
+        background-color: black;
+    }
 `
 const ProjectsButton = styled.button`
 background-color:transparent;
@@ -145,6 +234,10 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
+.lightItUp{
+        color:white;
+        background-color: black;
+    }
 `
 const SkillsButton = styled.button`
 background-color:transparent;
@@ -155,49 +248,8 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-`
-const CheckModeContainer = styled.div`
-position:fixed;
-top:2vh;
-right:2vw;
-display:flex;
-align-items: center;
-z-index:10;
-`
-const CheckModeSlider = styled.label`
-position: relative;
-display: inline-block;
-width:5vw;
-height:2vh;
-background-color: #ccc;
-border-radius: 20px;
-transition:background-color 0.3s;
-cursor:pointer;
-z-index:10;
-`
-const CheckModeSliderDot = styled.span`
-z-index:10;
-position:absolute;
-width:17px;
-height:17px;
-border-radius: 50%;
-background-color:white;
-top:1px;
-left:1px;
-//transition: transform  ease-in-out 0.3s;
-`
-const CheckModeButton = styled.input.attrs({type:"checkbox"})`
-display:none;
-z-index:10;
-
-&:checked + ${CheckModeSlider}{
-    background-color: #2196f3;
-}
-
-&:checked + ${CheckModeSliderDot}{
-    top:1px;
-    right:1px;
- //transform: translateX(4vw);
- //transition: transform ease-in-out 0.3s;
-}
+.lightItUp{
+        color:white;
+        background-color: black;
+    }
 `

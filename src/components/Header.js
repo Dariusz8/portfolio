@@ -31,7 +31,7 @@ const HeadName = styled.h1`
 font-size: 42px;
 font-style: italic;
 margin-left:5vw;
-text-shadow: 1vh 1vw;
+//text-shadow: 1vh 1vw;
 `
 const HeadLinks = styled.div`
 display:flex;
