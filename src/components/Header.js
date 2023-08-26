@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled  from "styled-components";
 import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
+import { ThemeContext } from "./ThemeContext";
 
 const Header = () =>{
+    const { nightOn, setNightOn, sunOn, setSunOn } = useContext(ThemeContext);
+
     return(
+        <div>
+        {
+            sunOn &&
         <HeadTopContainer>
             <HeadName>Dariusz Czeczuk</HeadName>
             <HeadLinks>
@@ -14,6 +20,19 @@ const Header = () =>{
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
             </HeadLinks>
         </HeadTopContainer>
+        }
+        {
+            nightOn &&
+        <HeadTopContainer className="NightMode">
+            <HeadName className="NightMode">Dariusz Czeczuk</HeadName>
+            <HeadLinks className="NightMode">
+                <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
+                <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
+                <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
+            </HeadLinks>
+        </HeadTopContainer>
+        }
+        </div>
     )
 }
 
@@ -26,12 +45,18 @@ left:0px;
 top:0px;
 background-color: transparent;
 color:rgb(0,150,0);
+.NightMode{
+        background-color: black;
+    }
 `
 const HeadName = styled.h1`
 font-size: 42px;
 font-style: italic;
 margin-left:5vw;
 //text-shadow: 1vh 1vw;
+.NightMode{
+        background-color: black;
+    }
 `
 const HeadLinks = styled.div`
 display:flex;
@@ -41,6 +66,9 @@ position: fixed;
 right:5vw;
 top:5vh; 
 //border:solid 5px red;
+.NightMode{
+        background-color: black;
+    }
 `
 const Linkedin = styled.p`
 font-size:22px;

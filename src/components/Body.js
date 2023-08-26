@@ -79,18 +79,18 @@ const Body = () => {
 
             {nightOn &&
             <WholeScreen>
-                <ButtonsRow className="lightItUp">
-                    <AboutButton onClick={handleAboutClick} className="lightItUp">About</AboutButton>
-                    <ProjectsButton onClick={handleProjectsClick} className="lightItUp">Projects</ProjectsButton>
-                    <SkillsButton onClick={handleSkillsClick} className="lightItUp">Skills</SkillsButton>
+                <ButtonsRow className="NightMode">
+                    <AboutButton onClick={handleAboutClick} className="NightMode">About</AboutButton>
+                    <ProjectsButton onClick={handleProjectsClick} className="NightMode">Projects</ProjectsButton>
+                    <SkillsButton onClick={handleSkillsClick} className="NightMode">Skills</SkillsButton>
                 </ButtonsRow>
 
-                <ModeButton onClick={handleSunMode} className="lightItUp">
+                <ModeButton onClick={handleSunMode} className="NightMode">
                 <BsFillSunFill/>
                 </ModeButton>
 
-                <WholeContent className="lightItUp">
-            <AboutSection className="lightItUp">
+                <WholeContent className="NightMode">
+            <AboutSection className="NightMode">
                 {
                     AboutActive &&
                     <About/>
@@ -117,7 +117,7 @@ export default Body;
 const WholeScreen = styled.div`
     width:100vw;
     height:100vh; 
-    .lightItUp{
+    .NightMode{
         color:white;
         background-color: black;
     }
@@ -138,7 +138,7 @@ const ModeButton = styled.button`
         cursor:pointer;
     }
 
-    .lightItUp{
+    .NightMode{
         color:white;
         background-color: black;
     }
@@ -160,7 +160,7 @@ top:25vh;
 display:flex;
 align-items: center;
 
-.lightItUp{
+.NightMode{
     color:white;
     background-color: black;
 }
@@ -173,7 +173,7 @@ display: flex;
 justify-content: space-evenly;
 z-index: 1;
 //border: solid 5px orange;
-.lightItUp{
+.NightMode{
     color:white;
     background-color: black;
 }
@@ -206,7 +206,7 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-.lightItUp{
+.NightMode{
         color:white;
         background-color: black;
     }
@@ -220,7 +220,7 @@ top:13vh;
 left:50vw;
 display:flex;
 align-items: center;
-.lightItUp{
+.NightMode{
         color:white;
         background-color: black;
     }
@@ -234,7 +234,7 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-.lightItUp{
+.NightMode{
         color:white;
         background-color: black;
     }
@@ -248,7 +248,7 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-.lightItUp{
+.NightMode{
         color:white;
         background-color: black;
     }
