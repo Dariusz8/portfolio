@@ -3,6 +3,7 @@ import styled  from "styled-components";
 import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
+import {RiMenuUnfoldLine} from "react-icons/ri"
 import { ThemeContext } from "./ThemeContext";
 
 const Header = () =>{
@@ -15,6 +16,7 @@ const Header = () =>{
         <HeadTopContainer>
             <HeadName>Dariusz Czeczuk</HeadName>
             <HeadLinks>
+                
                 <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
                 <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
@@ -38,7 +40,7 @@ const Header = () =>{
 
 const HeadTopContainer = styled.div`
 width:100vw;
-height:13vh;
+//height:13vh;
 //border:solid 1px red;
 position:fixed;
 left:0px;
@@ -60,11 +62,11 @@ margin-left:5vw;
 `
 const HeadLinks = styled.div`
 display:flex;
-flex-direction:row;
+flex-direction:column;
 column-gap:7vw;
 position: fixed;
-right:5vw;
-top:5vh; 
+left:2vw;
+top:25vh; 
 //border:solid 5px red;
 .NightMode{
         background-color: black;

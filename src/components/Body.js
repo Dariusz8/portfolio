@@ -149,7 +149,7 @@ width:100vw;
 height:87vh;
 position: fixed;
 top:13vh;
-background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
+//background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
 `
 const WholeContent = styled.div`
 width:100vw;
