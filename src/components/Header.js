@@ -10,48 +10,39 @@ const Header = () =>{
     const { nightOn, setNightOn, sunOn, setSunOn } = useContext(ThemeContext);
     const [MenuActive, setMenuActive] = useState(false);
 
+    const toggleMenu = () => {
+        setMenuActive(!MenuActive);
+      };
+
     return(
         <div>
         {
             sunOn &&
-        <HeadTopContainer>
+        <div>
             <HeadName>Dariusz Czeczuk</HeadName>
             <HeadLinks>
-                <div><RiMenuUnfoldLine/></div>
+                <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
                 <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
                 <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
             </HeadLinks>
-        </HeadTopContainer>
+        </div>
         }
         {
             nightOn &&
-        <HeadTopContainer className="NightMode">
+        <div>
             <HeadName className="NightMode">Dariusz Czeczuk</HeadName>
             <HeadLinks className="NightMode">
                 <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
                 <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
             </HeadLinks>
-        </HeadTopContainer>
+        </div>
         }
         </div>
     )
 }
 
-const HeadTopContainer = styled.div`
-width:100vw;
-//height:13vh;
-//border:solid 1px red;
-position:fixed;
-left:0px;
-top:0px;
-background-color: transparent;
-color:rgb(0,150,0);
-.NightMode{
-        background-color: black;
-    }
-`
 const HeadName = styled.h1`
 font-size: 42px;
 font-style: italic;
@@ -68,9 +59,11 @@ column-gap:7vw;
 position: fixed;
 left:2vw;
 top:25vh; 
+z-index: 1;
 //border:solid 5px red;
 .NightMode{
         background-color: black;
+        color:white;
     }
 `
 const Linkedin = styled.p`
@@ -97,6 +90,15 @@ font-size:22px;
 const HeadLink = styled.a`
 color:inherit;
 text-decoration: none;
+`
+const MenuButton = styled.button`
+background-color: transparent;
+border: none;
+font-size:22px;
+&:hover{
+    cursor: pointer;
+    scale:2;
+}
 `
 
 export default Header
