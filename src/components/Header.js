@@ -1,13 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styled  from "styled-components";
 import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
 import {RiMenuUnfoldLine} from "react-icons/ri"
-import { ThemeContext } from "./ThemeContext";
+import  ThemeContext  from "./ThemeContext";
 
 const Header = () =>{
     const { nightOn, setNightOn, sunOn, setSunOn } = useContext(ThemeContext);
+    const [MenuActive, setMenuActive] = useState(false);
 
     return(
         <div>
@@ -16,7 +17,7 @@ const Header = () =>{
         <HeadTopContainer>
             <HeadName>Dariusz Czeczuk</HeadName>
             <HeadLinks>
-                
+                <div><RiMenuUnfoldLine/></div>
                 <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
                 <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>

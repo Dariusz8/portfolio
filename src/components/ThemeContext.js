@@ -1,8 +1,8 @@
 import React, { createContext, useState} from "react";
 
-export const ThemeContext = createContext();
+const ThemeContext = createContext();
 
-export const ThemeContextProvider= ({children}) => {
+export const ThemeContextProvider= ({ children }) => {
     const [nightOn, setNightOn] = useState(false);
     const [sunOn, setSunOn] = useState(true);
 
@@ -13,6 +13,4 @@ export const ThemeContextProvider= ({children}) => {
     )
 }
 
-// export function useTheme() {
-//     return useContext(ThemeContext)
-// }
+export default ThemeContext;
