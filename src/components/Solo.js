@@ -50,8 +50,8 @@ const Container = styled.div`
 position: fixed;
 top:28vh;
 left:1vw;
-width:48vw;
-height:70vh;
+//width:48vw;
+//height:70vh;
 //background-color: transparent;
 //border: solid red 5px;
 `

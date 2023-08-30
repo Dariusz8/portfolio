@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
@@ -6,6 +6,13 @@ import Solo from "./Solo";
 import Projects from "./Projects";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsFillSunFill } from "react-icons/bs";
+import {FiLinkedin} from "react-icons/fi";
+import {FiGithub} from "react-icons/fi";
+import {TfiEmail} from "react-icons/tfi";
+import {RiMenuUnfoldLine} from "react-icons/ri";
+import {RiMenuFoldLine} from "react-icons/ri";
+import  ThemeContext  from "./ThemeContext";
+
 
 const Body = () => {
     const [AboutActive, setAboutActive] = useState(true);
@@ -13,7 +20,9 @@ const Body = () => {
     const [SkillsActive, setSkillsActive] = useState(false);
     const [nightOn, setNightOn] = useState(false);
     const [sunOn, setSunOn] = useState(true);
- 
+    const [MenuActive, setMenuActive] = useState(false);
+    //const { nightOn, setNightOn, sunOn, setSunOn } = useContext(ThemeContext);
+
     const handleDarkMode = () => {
         setNightOn(true);
         setSunOn(false);
@@ -42,11 +51,24 @@ const Body = () => {
         setSkillsActive(true);
     };
 
+    const toggleMenu = () => {
+        setMenuActive(!MenuActive);
+      };
+
     return(
         <DaBody>
             {
                 sunOn &&
                 <WholeScreen>
+                    <div>
+                <HeadName>Dariusz Czeczuk</HeadName>
+                <HeadLinks>
+                    <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
+                    <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
+                    <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
+                    <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
+                </HeadLinks>
+                    </div>
                 <ButtonsRow>
                     <AboutButton onClick={handleAboutClick}>About</AboutButton>
                     <ProjectsButton onClick={handleProjectsClick}>Projects</ProjectsButton>
@@ -79,6 +101,15 @@ const Body = () => {
 
             {nightOn &&
             <WholeScreen>
+                <div>
+            <HeadName className="NightMode">Dariusz Czeczuk</HeadName>
+            <HeadLinks className="NightMode">
+                <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
+                <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
+                <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
+                <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
+            </HeadLinks>
+                </div>
                 <ButtonsRow className="NightMode">
                     <AboutButton onClick={handleAboutClick} className="NightMode">About</AboutButton>
                     <ProjectsButton onClick={handleProjectsClick} className="NightMode">Projects</ProjectsButton>
@@ -252,4 +283,68 @@ ${underlineAnimation}
         color:white;
         background-color: black;
     }
+`
+
+const HeadName = styled.h1`
+font-size: 42px;
+font-style: italic;
+position: fixed;
+left:40vw;
+top: 2vh;
+z-index: 1000;
+//text-shadow: 1vh 1vw;
+.NightMode{
+        background-color: black;
+        color:white;
+    }
+`
+const HeadLinks = styled.div`
+display:flex;
+flex-direction:column;
+column-gap:7vw;
+position: fixed;
+left:2vw;
+top:25vh; 
+z-index: 1;
+color: rgb(0,155,0);
+//border:solid 5px red;
+.NightMode{
+        background-color: black;
+        //color:white;
+    }
+`
+const Linkedin = styled.p`
+font-size:22px;
+
+&:hover{
+    scale:2;
+}
+`
+const Github = styled.p`
+font-size:22px;
+
+&:hover{
+    scale:2;
+}
+`
+const Email = styled.p`
+font-size:22px;
+
+&:hover{
+    scale:2;
+}
+`
+const HeadLink = styled.a`
+color:inherit;
+text-decoration: none;
+`
+const MenuButton = styled.button`
+background-color: transparent;
+border: none;
+font-size:22px;
+color: rgb(0,155,0);
+&:hover{
+    cursor: pointer;
+    scale:2;
+}
 `
