@@ -69,12 +69,15 @@ const Body = () => {
                     <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
                 </HeadLinks>
                     </div>
+                    {
+                        MenuActive &&
                 <ButtonsRow>
                     <AboutButton onClick={handleAboutClick}>About</AboutButton>
                     <ProjectsButton onClick={handleProjectsClick}>Projects</ProjectsButton>
                     <SkillsButton onClick={handleSkillsClick}>Skills</SkillsButton>
                 </ButtonsRow>
-
+                    }
+                
                 <ModeButton onClick={handleDarkMode}>
                 <BsFillMoonStarsFill/>
                 </ModeButton>
@@ -94,7 +97,7 @@ const Body = () => {
                     <Skills/>
                 }
             </AboutSection>
-            <Solo/>
+                <Solo/>
         </WholeContent>
                 </WholeScreen>
             }
@@ -110,11 +113,15 @@ const Body = () => {
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
             </HeadLinks>
                 </div>
-                <ButtonsRow className="NightMode">
-                    <AboutButton onClick={handleAboutClick} className="NightMode">About</AboutButton>
-                    <ProjectsButton onClick={handleProjectsClick} className="NightMode">Projects</ProjectsButton>
-                    <SkillsButton onClick={handleSkillsClick} className="NightMode">Skills</SkillsButton>
-                </ButtonsRow>
+                {
+                    MenuActive &&
+                    <ButtonsRow className="NightMode">
+                        <AboutButton onClick={handleAboutClick} className="NightMode">About</AboutButton>
+                        <ProjectsButton onClick={handleProjectsClick} className="NightMode">Projects</ProjectsButton>
+                        <SkillsButton onClick={handleSkillsClick} className="NightMode">Skills</SkillsButton>
+                    </ButtonsRow>
+                }
+                
 
                 <ModeButton onClick={handleSunMode} className="NightMode">
                 <BsFillSunFill/>
@@ -135,7 +142,7 @@ const Body = () => {
                     <Skills/>
                 }
             </AboutSection>
-            <Solo/>
+                <Solo/>
         </WholeContent>
             </WholeScreen>}
         </DaBody>
@@ -177,9 +184,13 @@ const ModeButton = styled.button`
 
 const DaBody = styled.div`
 width:100vw;
-height:87vh;
+height:100vh;
 position: fixed;
 top:13vh;
+.NightMode{
+        color:white;
+        background-color: black;
+    }
 //background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
 `
 const WholeContent = styled.div`

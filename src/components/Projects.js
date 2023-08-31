@@ -20,7 +20,7 @@ height:42vh;
 overflow-y:scroll;
 scroll-behavior: smooth;
 position: fixed;
-left:50vw;
+left:27vw;
 top:40vh;
 border-radius: 23px;
 `

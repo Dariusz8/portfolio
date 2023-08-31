@@ -19,12 +19,13 @@ width:48vw;
 height:70vh;
 //border: solid 5px purple;
 position: fixed;
-left:50vw;
+left:30vw;
 top:37vh;
 `
 
 const AboutText = styled.p`
 text-indent: 3vh;
+font-size: 18px;
 `
 
 export default About
