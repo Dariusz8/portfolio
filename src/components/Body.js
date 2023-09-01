@@ -116,9 +116,9 @@ const Body = () => {
                 {
                     MenuActive &&
                     <ButtonsRow className="NightMode">
-                        <AboutButton onClick={handleAboutClick} className="NightMode">About</AboutButton>
-                        <ProjectsButton onClick={handleProjectsClick} className="NightMode">Projects</ProjectsButton>
-                        <SkillsButton onClick={handleSkillsClick} className="NightMode">Skills</SkillsButton>
+                        <NightAboutButton onClick={handleAboutClick} >About</NightAboutButton>
+                        <NightProjectsButton onClick={handleProjectsClick} >Projects</NightProjectsButton>
+                        <NightSkillsButton onClick={handleSkillsClick} >Skills</NightSkillsButton>
                     </ButtonsRow>
                 }
                 
@@ -237,6 +237,38 @@ position: relative;
     }
 }
 `
+const nightUnderlineAnimation = `
+position: relative;
+&:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+&:hover {
+    &:after {
+    transform: scaleX(1);
+    }
+}
+`
+const NightAboutButton = styled.button`
+background-color:transparent;
+font-size:28px;
+border:none;
+color:white;
+        background-color: black;
+${nightUnderlineAnimation}
+
+&:hover{
+    cursor:pointer;
+}
+`
+
 const AboutButton = styled.button`
 background-color:transparent;
 font-size:28px;
@@ -246,10 +278,6 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-.NightMode{
-        color:white;
-        background-color: black;
-    }
 `
 const AboutSection = styled.div`
 width:48vw;
@@ -265,6 +293,19 @@ align-items: center;
         background-color: black;
     }
 `
+const NightProjectsButton = styled.button`
+background-color:transparent;
+font-size:28px;
+border:none;
+color:white;
+        background-color: black;
+${nightUnderlineAnimation}
+
+&:hover{
+    cursor:pointer;
+}
+`
+
 const ProjectsButton = styled.button`
 background-color:transparent;
 font-size:28px;
@@ -274,11 +315,17 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-.NightMode{
-        color:white;
-        background-color: black;
-    }
+
 `
+const NightSkillsButton = styled.button`
+background-color:transparent;
+font-size:28px;
+border:none;
+color:white;
+        background-color: black;
+${nightUnderlineAnimation}
+`
+
 const SkillsButton = styled.button`
 background-color:transparent;
 font-size:28px;
@@ -288,10 +335,6 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-.NightMode{
-        color:white;
-        background-color: black;
-    }
 `
 
 const HeadName = styled.h1`
