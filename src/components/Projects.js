@@ -29,9 +29,11 @@ background-image: url('https://media.licdn.com/dms/image/D4E2DAQEE5eZhMfQIoQ/pro
 height: 100%;
 width: 100%;
 background-clip: content-box;
+margin-bottom: 10vh;
 
 &:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
 `
 const BootGroup = styled.div`
@@ -49,6 +51,7 @@ background-image: url('https://www.concordia.ca/etc/designs/concordia/clientlibs
 
 &:hover{
     cursor: pointer;
+    transform: scale(1.2);
 }
 `
 

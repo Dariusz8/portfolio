@@ -167,9 +167,10 @@ const ModeButton = styled.button`
     width:3vw;
     height:3vh;
     position: fixed;
-    top:1vh;
-    right:1vw;
+    top:2vh;
+    right:2vw;
     border:none;
+    z-index: 10;
     font-size:2em;
 
     &:hover{
@@ -186,7 +187,6 @@ const DaBody = styled.div`
 width:100vw;
 height:100vh;
 position: fixed;
-top:13vh;
 .NightMode{
         color:white;
         background-color: black;
@@ -195,10 +195,8 @@ top:13vh;
 `
 const WholeContent = styled.div`
 width:100vw;
-height:75vh;
-//border: solid 5px purple;
+height:100vh;
 position: fixed;
-top:25vh;
 display:flex;
 align-items: center;
 

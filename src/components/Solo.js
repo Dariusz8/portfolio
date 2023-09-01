@@ -62,25 +62,25 @@ border-radius: 50% 0 0 0;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
 background-position-x: 30%;
-background-position-y: 17%;
+background-position-y: 24%;
 //animation: ${topLeftAnimation} 3s alternate-reverse infinite;
 `
 const TopRight = styled.div`
 position: fixed;
 top:2%;
-left:13%;
-width:80px;
+left:11.6%;
+width:81px;
 height:80px;
 border-radius: 0 50% 0 0;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
-background-position-x: 57%;
-background-position-y: 17%;
+background-position-x: 51%;
+background-position-y: 24%;
 //animation: ${topRightAnimation} 3s alternate-reverse infinite;
 `
 const BottomLeft = styled.div`
 position: fixed;
-top: 13%;
+top: 11.9%;
 left:6%;
 width:80px;
 height:80px;
@@ -93,14 +93,14 @@ background-position-y: 45%;
 `
 const BottomRight = styled.div`
 position: fixed;
-top:13%;
-left:13%;
+top:11.9%;
+left:11.6%;
 width:80px;
 height:80px;
 border-radius: 0 0 50% 0;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');
 background-clip: content-box;
-background-position-x: 57%;
+background-position-x: 51%;
 background-position-y: 45%;
 //animation: ${bottomRightAnimation} 3s alternate-reverse infinite;
 `
