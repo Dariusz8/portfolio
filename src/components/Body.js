@@ -191,7 +191,6 @@ position: fixed;
         color:white;
         background-color: black;
     }
-//background: radial-gradient(circle, rgba(255,255,255,1) 90%, rgba(29,80,148,1) 100%);
 `
 const WholeContent = styled.div`
 width:100vw;
@@ -208,14 +207,15 @@ align-items: center;
 const ButtonsRow = styled.div`
 position:fixed;
 top:21vh;
-width:100vw;
+left:20vw;
+width:60vw;
 display: flex;
 justify-content: space-evenly;
 z-index: 1;
-//border: solid 5px orange;
 .NightMode{
     color:white;
     background-color: black;
+    z-index: 1;
 }
 `
 const underlineAnimation = `
