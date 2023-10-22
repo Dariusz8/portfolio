@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Image} from 'cloudinary-react';
 
 const Projects = () => {
     const redirectToExternalURL = (url) =>{
@@ -7,7 +8,7 @@ const Projects = () => {
     }
     return(
         <ProjectsContainer>
-            <StarWarsProject onClick={() => redirectToExternalURL("https://github.com/Dariusz8/FinalProject")}/>
+            <StarWarsProject cloudName="dly85se71" publicId="https://res.cloudinary.com/dly85se71/image/upload/v1698009048/Screen_Shot_2023-10-22_at_5.08.55_PM_asxlim.png" onClick={() => redirectToExternalURL("https://github.com/Dariusz8/FinalProject")}/>
             <BootGroup onClick={() => redirectToExternalURL("https://github.com/Dariusz8/groupProjectECommerce")} >Group Project</BootGroup>
         </ProjectsContainer>
     )
@@ -24,13 +25,10 @@ left:27vw;
 top:40vh;
 border-radius: 23px;
 `
-const StarWarsProject = styled.div`
-background-image: url('https://media.licdn.com/dms/image/D4E2DAQEE5eZhMfQIoQ/profile-treasury-image-shrink_800_800/0/1686964493212?e=1698616800&v=beta&t=PsSklE6aesFu5Lwwb74HjKNsbchOfCk86TPEMwPrDlQ');
+const StarWarsProject = styled(Image)`
 height: 100%;
 width: 100%;
-background-clip: content-box;
 margin-bottom: 10vh;
-
 &:hover{
     cursor: pointer;
     transform: scale(1.1);
