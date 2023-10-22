@@ -25,7 +25,7 @@ top:40vh;
 border-radius: 23px;
 `
 const StarWarsProject = styled.div`
-background-image: url('https://media.licdn.com/dms/image/D4E2DAQEE5eZhMfQIoQ/profile-treasury-image-shrink_800_800/0/1686964493212?e=1693623600&v=beta&t=YHv4vv-0R4N3QinNHxB_tbqT2VxjA0nRwwGD6oVuCeQ');
+background-image: url('https://media.licdn.com/dms/image/D4E2DAQEE5eZhMfQIoQ/profile-treasury-image-shrink_800_800/0/1686964493212?e=1698616800&v=beta&t=PsSklE6aesFu5Lwwb74HjKNsbchOfCk86TPEMwPrDlQ');
 height: 100%;
 width: 100%;
 background-clip: content-box;
