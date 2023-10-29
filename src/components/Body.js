@@ -2,7 +2,8 @@ import React, {useState, useContext} from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
-import Solo from "./Solo";
+import {Image} from 'cloudinary-react';
+//import Solo from "./Solo";
 import Projects from "./Projects";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsFillSunFill } from "react-icons/bs";
@@ -61,7 +62,7 @@ const Body = () => {
                 sunOn &&
                 <WholeScreen>
                     <div>
-                <HeadName>Dariusz Czeczuk</HeadName>
+                
                 <HeadLinks>
                     <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
                     <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
@@ -97,16 +98,15 @@ const Body = () => {
                     <Skills/>
                 }
             </AboutSection>
-                <Solo/>
         </WholeContent>
                 </WholeScreen>
             }
 
             {nightOn &&
-            <WholeScreen>
+            <WholeScreen >
                 <div>
-            <HeadName className="NightMode">Dariusz Czeczuk</HeadName>
-            <HeadLinks className="NightMode">
+            
+            <HeadLinks>
                 <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
                 <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
                 <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
@@ -115,7 +115,7 @@ const Body = () => {
                 </div>
                 {
                     MenuActive &&
-                    <ButtonsRow className="NightMode">
+                    <ButtonsRow >
                         <NightAboutButton onClick={handleAboutClick} >About</NightAboutButton>
                         <NightProjectsButton onClick={handleProjectsClick} >Projects</NightProjectsButton>
                         <NightSkillsButton onClick={handleSkillsClick} >Skills</NightSkillsButton>
@@ -123,12 +123,12 @@ const Body = () => {
                 }
                 
 
-                <ModeButton onClick={handleSunMode} className="NightMode">
-                <BsFillSunFill/>
+                <ModeButton onClick={handleSunMode}>
+                <SunModeButton><BsFillSunFill /></SunModeButton>
                 </ModeButton>
 
                 <WholeContent className="NightMode">
-            <AboutSection className="NightMode">
+            <AboutSection >
                 {
                     AboutActive &&
                     <About/>
@@ -142,7 +142,6 @@ const Body = () => {
                     <Skills/>
                 }
             </AboutSection>
-                <Solo/>
         </WholeContent>
             </WholeScreen>}
         </DaBody>
@@ -153,22 +152,36 @@ const Body = () => {
 export default Body;
 
 const WholeScreen = styled.div`
-    width:100vw;
-    height:100vh; 
+    width:100%;
+    height:100%;
+    background-size : cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2k5NjRhazgweWQybHI5MW16dThjcGlxemVtcnYxdG5pcTg5dnJxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccKEsBDAAQTrutQ9LA/giphy.gif
+    //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2k5NjRhazgweWQybHI5MW16dThjcGlxemVtcnYxdG5pcTg5dnJxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccKEsBDAAQTrutQ9LA/giphy.gif');
     .NightMode{
         color:white;
-        background-color: black;
+        width:100%;
+        height:100%;
+        background-size : cover ;
+        background-repeat: no-repeat;
+        background-position: center;
+        //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHpoYTU2M2Izc2p3b3ZxbDF6c2V5bWp6bWYyMjFmZXFkcjg5Y3lxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xluSS9Tw1auAP6/giphy.gif
+        //https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Z1eWhmazhpNGF0Z2h5MjZsMWRxbnl1ZHhwZWZhMGMyMTF0YTQwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6vemFHst2MWMrbGgfr/giphy.gif
+        background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjkxYmtsczVzd2VwbjJ3dGJnYWlldmh1bnRkdno4emN5d2s4cHVjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ODcgqrqIeNuewjiqow/giphy.gif');
+
     }
     `
 
 const ModeButton = styled.button`
     background-color: transparent;
     color: black;
-    width:3vw;
-    height:3vh;
+    width:3%;
+    height:3%;
     position: fixed;
-    top:2vh;
-    right:2vw;
+    top:4vh;
+    left:2vw;
     border:none;
     z-index: 10;
     font-size:2em;
@@ -179,44 +192,40 @@ const ModeButton = styled.button`
 
     .NightMode{
         color:white;
-        background-color: black;
+        background-color: transparent;
+        border: none;
+        
     }
 `
 
 const DaBody = styled.div`
-width:100vw;
-height:100vh;
+width:100%;
+height:100%;
 position: fixed;
 .NightMode{
         color:white;
-        background-color: black;
     }
 `
 const WholeContent = styled.div`
-width:100vw;
-height:100vh;
-position: fixed;
+width:100%;
+height:100%;
 display:flex;
 align-items: center;
 
 .NightMode{
     color:white;
-    background-color: black;
+    background-color: transparent;
 }
 `
 const ButtonsRow = styled.div`
 position:fixed;
+background-color: transparent;
 top:21vh;
 left:20vw;
-width:60vw;
+width:60%;
 display: flex;
 justify-content: space-evenly;
 z-index: 1;
-.NightMode{
-    color:white;
-    background-color: black;
-    z-index: 1;
-}
 `
 const underlineAnimation = `
 position: relative;
@@ -258,10 +267,9 @@ position: relative;
 `
 const NightAboutButton = styled.button`
 background-color:transparent;
-font-size:28px;
+font-size:2em;
 border:none;
 color:white;
-        background-color: black;
 ${nightUnderlineAnimation}
 
 &:hover{
@@ -271,7 +279,7 @@ ${nightUnderlineAnimation}
 
 const AboutButton = styled.button`
 background-color:transparent;
-font-size:28px;
+font-size:2em;
 border:none;
 ${underlineAnimation}
 
@@ -280,25 +288,21 @@ ${underlineAnimation}
 }
 `
 const AboutSection = styled.div`
-width:48vw;
-height:87vh;
-//border: solid 5px purple;
+width:48%;
+height:87%;
 position: fixed;
 top:13vh;
 left:50vw;
 display:flex;
 align-items: center;
-.NightMode{
-        color:white;
-        background-color: black;
-    }
+
 `
 const NightProjectsButton = styled.button`
 background-color:transparent;
-font-size:28px;
+font-size:2em;
 border:none;
 color:white;
-        background-color: black;
+background-color: transparent;
 ${nightUnderlineAnimation}
 
 &:hover{
@@ -308,7 +312,7 @@ ${nightUnderlineAnimation}
 
 const ProjectsButton = styled.button`
 background-color:transparent;
-font-size:28px;
+font-size:2em;
 border:none;
 ${underlineAnimation}
 
@@ -319,16 +323,15 @@ ${underlineAnimation}
 `
 const NightSkillsButton = styled.button`
 background-color:transparent;
-font-size:28px;
+font-size:2em;
 border:none;
 color:white;
-        background-color: black;
 ${nightUnderlineAnimation}
 `
 
 const SkillsButton = styled.button`
 background-color:transparent;
-font-size:28px;
+font-size:2em;
 border:none;
 ${underlineAnimation}
 
@@ -336,55 +339,49 @@ ${underlineAnimation}
     cursor:pointer;
 }
 `
-
-const HeadName = styled.h1`
-font-size: 42px;
-font-style: italic;
-position: fixed;
-left:40vw;
-top: 2vh;
-z-index: 1000;
-//text-shadow: 1vh 1vw;
-.NightMode{
-        background-color: black;
-        color:white;
-    }
-`
 const HeadLinks = styled.div`
 display:flex;
 flex-direction:column;
 column-gap:7vw;
+background-color: transparent;
+border: none;
 position: fixed;
 left:2vw;
 top:25vh; 
 z-index: 1;
 color: rgb(0,155,0);
-//border:solid 5px red;
 .NightMode{
-        background-color: black;
-        //color:white;
+background-color: transparent;
+border: none;
     }
 `
 const Linkedin = styled.p`
-font-size:22px;
+background-color: transparent;
+font-size:2em;
 
 &:hover{
     scale:2;
 }
 `
 const Github = styled.p`
-font-size:22px;
+background-color: transparent;
+font-size:2em;
 
 &:hover{
     scale:2;
 }
 `
 const Email = styled.p`
-font-size:22px;
+background-color: transparent;
+font-size:2em;
 
 &:hover{
     scale:2;
 }
+`
+const SunModeButton = styled.p`
+background-color: transparent;
+color: white;
 `
 const HeadLink = styled.a`
 color:inherit;
@@ -393,7 +390,7 @@ text-decoration: none;
 const MenuButton = styled.button`
 background-color: transparent;
 border: none;
-font-size:22px;
+font-size:2em;
 color: rgb(0,155,0);
 &:hover{
     cursor: pointer;

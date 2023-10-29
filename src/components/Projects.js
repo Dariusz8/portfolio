@@ -15,20 +15,19 @@ const Projects = () => {
 }
 
 const ProjectsContainer = styled.div`
-width:49vw;
-height:42vh;
-//border: solid 5px purple;
+width:49%;
+height:42%;
 overflow-y:scroll;
 scroll-behavior: smooth;
 position: fixed;
 left:27vw;
 top:40vh;
-border-radius: 23px;
+border-radius: 10%;
 `
 const StarWarsProject = styled(Image)`
 height: 100%;
 width: 100%;
-margin-bottom: 10vh;
+margin-bottom: 10%;
 &:hover{
     cursor: pointer;
     transform: scale(1.1);

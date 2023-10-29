@@ -19,21 +19,18 @@ const Skills = () =>{
 }
 
 const AllSkillsContent = styled.div`
-width:48vw;
-height:30vh;
-//border: solid 5px purple;
+width:48%;
+height:30%;
 overflow-y:scroll;
 scroll-behavior: smooth;
 position: fixed;
 left:25vw;
 top:40vh;
-font-size:18px;
 text-align: center;
 transform-style: preserve-3d;
 z-index: 100;
 `
 const SkillsList = styled.div`
-//list-style: none;
 padding:0px;
 margin:0px;
 transform-style: preserve-3d;
@@ -43,7 +40,7 @@ transform: rotateX(-20deg) translateZ(-100px);
 `
 const SkillsText = styled.p`
 margin: 5vh 0 5vh 0;
-font-size:18px;
+font-size:2em;
 transform: rotateX(20deg);
 `
 

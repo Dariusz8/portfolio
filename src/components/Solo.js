@@ -10,9 +10,8 @@ const Solo = () =>{
 }
 
 const Container = styled.div`
-position: fixed;
-width: 150px;
-height: 150px;
+width: 12%;
+height: 20%;
 top:2vh;
 left:6vw;
 background-image: url('https://avatars.githubusercontent.com/u/108949953?v=4');

@@ -12,20 +12,20 @@ const About = () => {
     )
 }
 
-const AboutHeader = styled.h1`
+const AboutHeader = styled.h2`
 `
 const AllAboutContent = styled.div`
-width:48vw;
-height:70vh;
-//border: solid 5px purple;
+width:48%;
+height:66%;
 position: fixed;
 left:30vw;
 top:37vh;
+overflow-y: scroll;
 `
 
 const AboutText = styled.p`
-text-indent: 3vh;
-font-size: 18px;
+text-indent: 3vw;
+font-size: 1.25em;
 `
 
 export default About
