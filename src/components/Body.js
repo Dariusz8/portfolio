@@ -12,11 +12,11 @@ import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
 import {RiMenuUnfoldLine} from "react-icons/ri";
 import {RiMenuFoldLine} from "react-icons/ri";
-import  ThemeContext  from "./ThemeContext";
+//import  ThemeContext  from "./ThemeContext";
 
 
 const Body = () => {
-    const [AboutActive, setAboutActive] = useState(true);
+    const [AboutActive, setAboutActive] = useState(false);
     const [ProjectsActive, setProjectsActive] = useState(false);
     const [SkillsActive, setSkillsActive] = useState(false);
     const [nightOn, setNightOn] = useState(false);
@@ -157,9 +157,11 @@ const WholeScreen = styled.div`
     background-size : cover ;
     background-repeat: no-repeat;
     background-position: center;
+    background-position-y: 40%;
+    background-position-x: 110%;
     //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2k5NjRhazgweWQybHI5MW16dThjcGlxemVtcnYxdG5pcTg5dnJxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccKEsBDAAQTrutQ9LA/giphy.gif
     //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif
-    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2k5NjRhazgweWQybHI5MW16dThjcGlxemVtcnYxdG5pcTg5dnJxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccKEsBDAAQTrutQ9LA/giphy.gif');
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif');
     .NightMode{
         color:white;
         width:100%;
@@ -167,7 +169,8 @@ const WholeScreen = styled.div`
         background-size : cover ;
         background-repeat: no-repeat;
         background-position: center;
-        //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHpoYTU2M2Izc2p3b3ZxbDF6c2V5bWp6bWYyMjFmZXFkcjg5Y3lxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xluSS9Tw1auAP6/giphy.gif
+        //https://wallpaperaccess.com/full/2825704.gif
+        //https://wallpaperaccess.com/full/8642932.gif
         //https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Z1eWhmazhpNGF0Z2h5MjZsMWRxbnl1ZHhwZWZhMGMyMTF0YTQwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6vemFHst2MWMrbGgfr/giphy.gif
         background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjkxYmtsczVzd2VwbjJ3dGJnYWlldmh1bnRkdno4emN5d2s4cHVjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ODcgqrqIeNuewjiqow/giphy.gif');
 
@@ -197,7 +200,6 @@ const ModeButton = styled.button`
         
     }
 `
-
 const DaBody = styled.div`
 width:100%;
 height:100%;
@@ -281,6 +283,7 @@ const AboutButton = styled.button`
 background-color:transparent;
 font-size:2em;
 border:none;
+color:black;
 ${underlineAnimation}
 
 &:hover{
@@ -313,6 +316,7 @@ ${nightUnderlineAnimation}
 const ProjectsButton = styled.button`
 background-color:transparent;
 font-size:2em;
+color:black;
 border:none;
 ${underlineAnimation}
 
@@ -328,10 +332,10 @@ border:none;
 color:white;
 ${nightUnderlineAnimation}
 `
-
 const SkillsButton = styled.button`
 background-color:transparent;
 font-size:2em;
+color:black;
 border:none;
 ${underlineAnimation}
 
@@ -349,11 +353,7 @@ position: fixed;
 left:2vw;
 top:25vh; 
 z-index: 1;
-color: rgb(0,155,0);
-.NightMode{
-background-color: transparent;
-border: none;
-    }
+color: white;
 `
 const Linkedin = styled.p`
 background-color: transparent;
@@ -391,7 +391,7 @@ const MenuButton = styled.button`
 background-color: transparent;
 border: none;
 font-size:2em;
-color: rgb(0,155,0);
+color: white;
 &:hover{
     cursor: pointer;
     scale:2;
