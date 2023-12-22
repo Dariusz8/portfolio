@@ -3,7 +3,6 @@ import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
 import {Image} from 'cloudinary-react';
-//import Solo from "./Solo";
 import Projects from "./Projects";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsFillSunFill } from "react-icons/bs";
@@ -62,7 +61,6 @@ const Body = () => {
                 sunOn &&
                 <WholeScreen>
                     <div>
-                
                 <HeadLinks>
                     <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
                     <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
@@ -105,13 +103,12 @@ const Body = () => {
             {nightOn &&
             <WholeScreen >
                 <div>
-            
-            <HeadLinks>
-                <MenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></MenuButton>
+            <NightHeadLinks>
+                <NightMenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></NightMenuButton>
                 <HeadLink href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer"><Linkedin><FiLinkedin/></Linkedin></HeadLink>
                 <HeadLink href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer"><Github><FiGithub/></Github></HeadLink>
                 <HeadLink href="mailto:dariusz.czeczuk@hotmail.com"><Email><TfiEmail/></Email></HeadLink>
-            </HeadLinks>
+            </NightHeadLinks>
                 </div>
                 {
                     MenuActive &&
@@ -154,11 +151,11 @@ export default Body;
 const WholeScreen = styled.div`
     width:100%;
     height:100%;
-    background-size : cover ;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 40%;
-    background-position-x: 110%;
+    background-position-x: 100%;
     //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2k5NjRhazgweWQybHI5MW16dThjcGlxemVtcnYxdG5pcTg5dnJxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccKEsBDAAQTrutQ9LA/giphy.gif
     //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif
     background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif');
@@ -176,7 +173,6 @@ const WholeScreen = styled.div`
 
     }
     `
-
 const ModeButton = styled.button`
     background-color: transparent;
     color: black;
@@ -353,6 +349,18 @@ position: fixed;
 left:2vw;
 top:25vh; 
 z-index: 1;
+color: black;
+`
+const NightHeadLinks = styled.div`
+display:flex;
+flex-direction:column;
+column-gap:7vw;
+background-color: transparent;
+border: none;
+position: fixed;
+left:2vw;
+top:25vh; 
+z-index: 1;
 color: white;
 `
 const Linkedin = styled.p`
@@ -391,7 +399,16 @@ const MenuButton = styled.button`
 background-color: transparent;
 border: none;
 font-size:2em;
-color: white;
+&:hover{
+    cursor: pointer;
+    scale:2;
+}
+`
+const NightMenuButton = styled.button`
+background-color: transparent;
+border: none;
+font-size:2em;
+color:white;
 &:hover{
     cursor: pointer;
     scale:2;
