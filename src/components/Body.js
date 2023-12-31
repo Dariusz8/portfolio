@@ -144,6 +144,8 @@ const Body = () => {
 export default Body;
 
 const WholeScreen = styled.div`
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     width:100%;
     height:100%;
     background-size: cover;
@@ -153,7 +155,9 @@ const WholeScreen = styled.div`
     
     `
 const NightWholeScreen = styled.div`
-     color:white;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    color:white;
     width:100%;
     height:100%;
     background-size : cover ;
@@ -162,6 +166,8 @@ const NightWholeScreen = styled.div`
     background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjkxYmtsczVzd2VwbjJ3dGJnYWlldmh1bnRkdno4emN5d2s4cHVjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ODcgqrqIeNuewjiqow/giphy.gif');
 `
 const ModeButton = styled.button`
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     background-color: transparent;
     width:3%;
     height:3%;
@@ -191,12 +197,16 @@ position: fixed;
     }
 `
 const WholeContent = styled.div`
+grid-column: 2 / 7;
+grid-row: 3 / 7;
 .NightMode{
     color:white;
     background-color: transparent;
 }
 `
 const ButtonsRow = styled.div`
+grid-column: 1 / 7;
+grid-row: 2 / 3;
 position:fixed;
 background-color: transparent;
 top:21vh;
@@ -267,6 +277,8 @@ ${underlineAnimation}
 }
 `
 const AboutSection = styled.div`
+grid-column: 2 / 7;
+grid-row: 3 / 7;
 width:48%;
 height:87%;
 position: fixed;
@@ -317,6 +329,8 @@ ${underlineAnimation}
 }
 `
 const HeadLinks = styled.div`
+grid-column: 1 / 2;
+grid-row: 3 / 7;
 display:flex;
 flex-direction:column;
 column-gap:7vw;
@@ -329,6 +343,8 @@ z-index: 1;
 color: black;
 `
 const NightHeadLinks = styled.div`
+grid-column: 1 / 2;
+grid-row: 3 / 7;
 display:flex;
 flex-direction:column;
 column-gap:7vw;
