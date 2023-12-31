@@ -1,8 +1,7 @@
-import React, {useState, useContext} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
-import {Image} from 'cloudinary-react';
 import Projects from "./Projects";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsFillSunFill } from "react-icons/bs";
@@ -10,9 +9,6 @@ import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
 import {RiMenuUnfoldLine} from "react-icons/ri";
-import {RiMenuFoldLine} from "react-icons/ri";
-//import  ThemeContext  from "./ThemeContext";
-
 
 const Body = () => {
     const [AboutActive, setAboutActive] = useState(false);
@@ -21,7 +17,6 @@ const Body = () => {
     const [nightOn, setNightOn] = useState(false);
     const [sunOn, setSunOn] = useState(true);
     const [MenuActive, setMenuActive] = useState(false);
-    //const { nightOn, setNightOn, sunOn, setSunOn } = useContext(ThemeContext);
 
     const handleDarkMode = () => {
         setNightOn(true);
@@ -78,7 +73,7 @@ const Body = () => {
                     }
                 
                 <ModeButton onClick={handleDarkMode}>
-                <BsFillMoonStarsFill/>
+                    <DarkModeButton><BsFillMoonStarsFill/></DarkModeButton>
                 </ModeButton>
 
                 <WholeContent>
@@ -101,7 +96,7 @@ const Body = () => {
             }
 
             {nightOn &&
-            <WholeScreen >
+            <NightWholeScreen >
                 <div>
             <NightHeadLinks>
                 <NightMenuButton onClick={toggleMenu}><RiMenuUnfoldLine/></NightMenuButton>
@@ -140,7 +135,7 @@ const Body = () => {
                 }
             </AboutSection>
         </WholeContent>
-            </WholeScreen>}
+            </NightWholeScreen>}
         </DaBody>
         
     )
@@ -154,28 +149,20 @@ const WholeScreen = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: 40%;
-    background-position-x: 100%;
-    //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2k5NjRhazgweWQybHI5MW16dThjcGlxemVtcnYxdG5pcTg5dnJxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccKEsBDAAQTrutQ9LA/giphy.gif
-    //https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif
     background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ3cTIxbjRicWNwdmZ6aXRtZjcwOHlqb2Y3d3lzemxhd2t6dWpkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YrTJKOe0FhQJAUXTyp/giphy.gif');
-    .NightMode{
-        color:white;
-        width:100%;
-        height:100%;
-        background-size : cover ;
-        background-repeat: no-repeat;
-        background-position: center;
-        //https://wallpaperaccess.com/full/2825704.gif
-        //https://wallpaperaccess.com/full/8642932.gif
-        //https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Z1eWhmazhpNGF0Z2h5MjZsMWRxbnl1ZHhwZWZhMGMyMTF0YTQwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6vemFHst2MWMrbGgfr/giphy.gif
-        background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjkxYmtsczVzd2VwbjJ3dGJnYWlldmh1bnRkdno4emN5d2s4cHVjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ODcgqrqIeNuewjiqow/giphy.gif');
-
-    }
+    
     `
+const NightWholeScreen = styled.div`
+     color:white;
+    width:100%;
+    height:100%;
+    background-size : cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjkxYmtsczVzd2VwbjJ3dGJnYWlldmh1bnRkdno4emN5d2s4cHVjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ODcgqrqIeNuewjiqow/giphy.gif');
+`
 const ModeButton = styled.button`
     background-color: transparent;
-    color: black;
     width:3%;
     height:3%;
     position: fixed;
@@ -188,13 +175,12 @@ const ModeButton = styled.button`
     &:hover{
         cursor:pointer;
     }
-
-    .NightMode{
-        color:white;
-        background-color: transparent;
-        border: none;
-        
-    }
+`
+const SunModeButton = styled.p`
+    color: white;
+`
+const DarkModeButton = styled.p`
+    color: black;
 `
 const DaBody = styled.div`
 width:100%;
@@ -205,11 +191,6 @@ position: fixed;
     }
 `
 const WholeContent = styled.div`
-width:100%;
-height:100%;
-display:flex;
-align-items: center;
-
 .NightMode{
     color:white;
     background-color: transparent;
@@ -274,7 +255,6 @@ ${nightUnderlineAnimation}
     cursor:pointer;
 }
 `
-
 const AboutButton = styled.button`
 background-color:transparent;
 font-size:2em;
@@ -294,7 +274,6 @@ top:13vh;
 left:50vw;
 display:flex;
 align-items: center;
-
 `
 const NightProjectsButton = styled.button`
 background-color:transparent;
@@ -308,7 +287,6 @@ ${nightUnderlineAnimation}
     cursor:pointer;
 }
 `
-
 const ProjectsButton = styled.button`
 background-color:transparent;
 font-size:2em;
@@ -319,7 +297,6 @@ ${underlineAnimation}
 &:hover{
     cursor:pointer;
 }
-
 `
 const NightSkillsButton = styled.button`
 background-color:transparent;
@@ -386,10 +363,6 @@ font-size:2em;
 &:hover{
     scale:2;
 }
-`
-const SunModeButton = styled.p`
-background-color: transparent;
-color: white;
 `
 const HeadLink = styled.a`
 color:inherit;
