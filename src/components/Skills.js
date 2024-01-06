@@ -13,6 +13,7 @@ const Skills = () =>{
                 <SkillsText>MongoDB</SkillsText>
                 <SkillsText>Python</SkillsText>
                 <SkillsText>R</SkillsText>
+                <SkillsText>MySQL</SkillsText>
             </SkillsList>
         </AllSkillsContent>
     )
