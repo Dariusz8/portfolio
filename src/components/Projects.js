@@ -8,7 +8,7 @@ const Projects = () => {
     }
     return(
         <ProjectsContainer>
-            <StarWarsProject cloudName="dly85se71" publicId="https://res.cloudinary.com/dly85se71/image/upload/v1698009048/Screen_Shot_2023-10-22_at_5.08.55_PM_asxlim.png" onClick={() => redirectToExternalURL("https://github.com/Dariusz8/FinalProject")}/>
+            <StarWarsProject cloudName="dly85se71" publicId="https://res.cloudinary.com/dly85se71/image/upload/v1698009048/Screen_Shot_2023-10-22_at_5.08.55_PM_asxlim.png" onClick={() => redirectToExternalURL("https://share.vidyard.com/watch/Vb8SfnwqnrtSNL93ZNeyiV?")}/>
             <BootGroup onClick={() => redirectToExternalURL("https://github.com/Dariusz8/groupProjectECommerce")} >Group Project</BootGroup>
         </ProjectsContainer>
     )
