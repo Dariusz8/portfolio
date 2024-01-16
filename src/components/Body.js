@@ -177,6 +177,7 @@ const ModeButton = styled.button`
     border:none;
     z-index: 10;
     font-size:2em;
+    min-width: 0;
 
     &:hover{
         cursor:pointer;
@@ -184,9 +185,11 @@ const ModeButton = styled.button`
 `
 const SunModeButton = styled.p`
     color: white;
+    min-width: 0;
 `
 const DarkModeButton = styled.p`
     color: black;
+    min-width: 0;
 `
 const DaBody = styled.div`
 width:100%;
@@ -202,6 +205,7 @@ grid-row: 3 / 7;
 .NightMode{
     color:white;
     background-color: transparent;
+    min-width: 0;
 }
 `
 const ButtonsRow = styled.div`
@@ -286,6 +290,7 @@ top:13vh;
 left:50vw;
 display:flex;
 align-items: center;
+min-width: 0;
 `
 const NightProjectsButton = styled.button`
 background-color:transparent;
@@ -383,6 +388,7 @@ font-size:2em;
 const HeadLink = styled.a`
 color:inherit;
 text-decoration: none;
+min-width: 0;
 `
 const MenuButton = styled.button`
 background-color: transparent;

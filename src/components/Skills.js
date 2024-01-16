@@ -38,11 +38,13 @@ transform-style: preserve-3d;
 transform-origin: 50% 50%;
 transition: transform 0.5 ease;
 transform: rotateX(-20deg) translateZ(-100px);
+min-width: 0;
 `
 const SkillsText = styled.p`
 margin: 5vh 0 5vh 0;
 font-size:2em;
 transform: rotateX(20deg);
+min-width: 0;
 `
 
 export default Skills;

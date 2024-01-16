@@ -15,7 +15,7 @@ const Projects = () => {
 }
 
 const ProjectsContainer = styled.div`
-width:49%;
+width:50%;
 height:42%;
 overflow-y:scroll;
 scroll-behavior: smooth;
@@ -28,6 +28,7 @@ const StarWarsProject = styled(Image)`
 height: 100%;
 width: 100%;
 margin-bottom: 10%;
+min-width: 0;
 &:hover{
     cursor: pointer;
     transform: scale(1.1);
@@ -41,6 +42,7 @@ height: 100%;
 width: 100%;
 font-size: 10rem;
 font-weight: bold;
+min-width: 0;
 background-clip: text;
 color:transparent;
 -webkit-background-clip: text;
