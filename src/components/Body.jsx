@@ -55,7 +55,6 @@ const Body = () => {
             {
                 sunOn &&
                 <div className="WholeScreen" >
-                    <div>
                     <div className="HeadLinks" >
                         <button className="MenuButton"  onClick={toggleMenu}>
                             <RiMenuUnfoldLine/>
@@ -69,7 +68,6 @@ const Body = () => {
                         <p className="HeadLink" href="mailto:dariusz.czeczuk@hotmail.com">
                             <p className="Email" ><TfiEmail/></p>
                         </p>
-                    </div>
                     </div>
                     {
                         MenuActive &&
