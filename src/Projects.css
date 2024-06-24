@@ -1,0 +1,40 @@
+.ProjectsContainer{
+    width:50%;
+    height:42%;
+    overflow-y:scroll;
+    scroll-behavior: smooth;
+    position: fixed;
+    left:27vw;
+    top:40vh;
+    border-radius: 10%;
+}
+
+.StarWarsProject {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10%;
+    min-width: 0;
+}
+.StarWarsProject:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.BootGroup{
+    text-align: center;
+    background-position-y: 29%;
+    background-position-x: 270%;
+    height: 100%;
+    width: 100%;
+    font-size: 10rem;
+    font-weight: bold;
+    min-width: 0;
+    background-clip: text;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-image: url('https://www.concordia.ca/etc/designs/concordia/clientlibs/img/news-default.jpg');
+}
+.BootGroup:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}

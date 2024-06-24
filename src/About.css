@@ -1,0 +1,18 @@
+.AllAboutContent{
+    width:48%;
+    height:66%;
+    position: fixed;
+    left:30vw;
+    top:37vh;
+    overflow-y: scroll;
+}
+
+.AboutHeader{
+    min-width: 0;
+}
+
+.AboutText{
+    text-indent: 3vw;
+    font-size: 1.25em;
+    min-width: 0;   
+}
