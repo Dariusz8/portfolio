@@ -45,6 +45,7 @@
 }
 .ModeButton:hover{
     cursor:pointer;
+    scale: 1.25;
 }
 
 .SunModeButton{
@@ -93,7 +94,8 @@
     grid-row: 3 / 7;
     display:flex;
     flex-direction:column;
-    column-gap:7vw;
+    justify-content: space-evenly;
+    
     background-color: transparent;
     border: none;
     position: fixed;
@@ -108,7 +110,8 @@
     grid-row: 3 / 7;
     display:flex;
     flex-direction:column;
-    column-gap:7vw;
+    justify-content: space-evenly;
+    
     background-color: transparent;
     border: none;
     position: fixed;
@@ -180,9 +183,9 @@
 .NightAboutButton::after{
     content: "";
     position: absolute;
-    left: 0;
+    left: 7vw;
     bottom: -2px;
-    width: 100%;
+    width: 20%;
     height: 2px;
     background-color: white;
     transform: scaleX(0);
@@ -204,9 +207,9 @@
 .NightProjectsButton::after{
     content: "";
     position: absolute;
-    left: 0;
+    left: 24vw;
     bottom: -2px;
-    width: 100%;
+    width: 20%;
     height: 2px;
     background-color: white;
     transform: scaleX(0);
@@ -228,9 +231,9 @@
 .NightSkillsButton::after{
     content: "";
     position: absolute;
-    left: 0;
+    left: 41vw;
     bottom: -2px;
-    width: 100%;
+    width: 20%;
     height: 2px;
     background-color: white;
     transform: scaleX(0);
@@ -252,9 +255,9 @@
 .AboutButton::after{
     content: "";
     position: absolute;
-    left: 0;
+    left: 7vw;
     bottom: -2px;
-    width: 100%;
+    width: 20%;
     height: 2px;
     background-color: black;
     transform: scaleX(0);
@@ -262,12 +265,10 @@
 }
 .AboutButton:hover::after{
     transform: scaleX(1);
-    cursor: pointer;
 }
 .AboutButton:hover{
     cursor: pointer;
 }
-
 
 .ProjectsButton{
     background-color:transparent;
@@ -278,9 +279,9 @@
 .ProjectsButton::after{
     content: "";
     position: absolute;
-    left: 0;
+    left: 24vw;
     bottom: -2px;
-    width: 100%;
+    width: 20%;
     height: 2px;
     background-color: black;
     transform: scaleX(0);
@@ -288,7 +289,6 @@
 }
 .ProjectsButton:hover::after{
     transform: scaleX(1);
-    cursor: pointer;
 }
 .ProjectsButton:hover{
     cursor: pointer;
@@ -303,9 +303,9 @@
 .SkillsButton::after{
     content: "";
     position: absolute;
-    left: 0;
+    left: 41vw;
     bottom: -2px;
-    width: 100%;
+    width: 20%;
     height: 2px;
     background-color: black;
     transform: scaleX(0);
@@ -313,12 +313,7 @@
 }
 .SkillsButton:hover::after{
     transform: scaleX(1);
-    cursor: pointer;
 }
 .SkillsButton:hover{
     cursor: pointer;
-}
-
-.NightMode{
-    color:white;
 }

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useContext } from "react";
 import '../Body.css';
 import About from "./About";
 import Skills from "./Skills";
@@ -9,14 +9,12 @@ import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
 import {RiMenuUnfoldLine} from "react-icons/ri";
+import { MyStateContext } from "./App";
 
 const Body = () => {
-    const [AboutActive, setAboutActive] = useState(false);
-    const [ProjectsActive, setProjectsActive] = useState(false);
-    const [SkillsActive, setSkillsActive] = useState(false);
-    const [nightOn, setNightOn] = useState(false);
-    const [sunOn, setSunOn] = useState(true);
-    const [MenuActive, setMenuActive] = useState(false);
+
+    const {aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive, setSkillsActive,
+        nightOn,setNightOn,sunOn, setSunOn, menuActive, setMenuActive} = useContext(MyStateContext);
 
     const handleDarkMode = () => {
         setSunOn(false);
@@ -47,7 +45,7 @@ const Body = () => {
     };
 
     const toggleMenu = () => {
-        setMenuActive(!MenuActive);
+        setMenuActive(!menuActive);
       };
 
     return(
@@ -70,7 +68,7 @@ const Body = () => {
                         </p>
                     </div>
                     {
-                        MenuActive &&
+                        menuActive &&
                 <div className="ButtonsRow" >
                     <div className="AboutButton"  onClick={handleAboutClick}>About</div>
                     <div className="ProjectsButton"  onClick={handleProjectsClick}>Projects</div>
@@ -87,15 +85,15 @@ const Body = () => {
                 <div className="WholeContent" >
                 <div className="AboutSection" >
                     {
-                        AboutActive &&
+                        aboutActive &&
                         <About/>
                     }
                     {
-                        ProjectsActive &&
+                        projectsActive &&
                         <Projects/>
                     }
                     {
-                        SkillsActive &&
+                        skillsActive &&
                         <Skills/>
                     }
                 </div>
@@ -122,7 +120,7 @@ const Body = () => {
             </div>
                 </div>
                 {
-                    MenuActive &&
+                    menuActive &&
                     <div className="ButtonsRow" >
                         <div className="NightAboutButton"  onClick={handleAboutClick} >About</div>
                         <div className="NightProjectsButton"  onClick={handleProjectsClick} >Projects</div>
@@ -138,15 +136,15 @@ const Body = () => {
                 <div className="NightMode WholeContent">
             <div className="AboutSection"  >
                 {
-                    AboutActive &&
+                    aboutActive &&
                     <About/>
                 }
                 {
-                    ProjectsActive &&
+                    projectsActive &&
                     <Projects/>
                 }
                 {
-                    SkillsActive &&
+                    skillsActive &&
                     <Skills/>
                 }
             </div>
