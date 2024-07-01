@@ -3,17 +3,14 @@ import '../Body.css';
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import {FiLinkedin} from "react-icons/fi";
-import {FiGithub} from "react-icons/fi";
-import {TfiEmail} from "react-icons/tfi";
-import {RiMenuUnfoldLine} from "react-icons/ri";
 import { MyStateContext } from "./App";
 import UiControl from "./UiControl";
+import Sidebar from "./Sidebar";
 
 const Body = () => {
 
     const {aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive, setSkillsActive,
-        nightOn,sunOn,menuActive,setMenuActive} = useContext(MyStateContext);
+        nightOn,sunOn,menuActive} = useContext(MyStateContext);
 
     const handleAboutClick = () => {
         setProjectsActive(false);
@@ -33,30 +30,15 @@ const Body = () => {
         setSkillsActive(true);
     };
 
-    const toggleMenu = () => {
-        setMenuActive(!menuActive);
-      };
-
     return(
         <div className="DaBody" >
             <UiControl/>
+            <Sidebar/>
             {
                 sunOn &&
                 <div className="WholeScreen" >
-                    <div className="HeadLinks" >
-                        <button className="MenuButton"  onClick={toggleMenu}>
-                            <RiMenuUnfoldLine/>
-                        </button>
-                        <p className="HeadLink"  href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer">
-                            <p className="Linkedin"> <FiLinkedin/> </p>
-                        </p>
-                        <p className="HeadLink" href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer">
-                            <p className="Github" > <FiGithub/> </p>
-                        </p>
-                        <p className="HeadLink" href="mailto:dariusz.czeczuk@hotmail.com">
-                            <p className="Email" ><TfiEmail/></p>
-                        </p>
-                    </div>
+                    <>
+                    </>
                     {
                         menuActive &&
                 <div className="ButtonsRow" >
@@ -86,20 +68,6 @@ const Body = () => {
             {nightOn &&
             <div className="NightWholeScreen"  >
                 <div>
-            <div className="NightHeadLinks" >
-                <div className="NightMenuButton"  onClick={toggleMenu}>
-                    <RiMenuUnfoldLine/>
-                </div>
-                <p className="HeadLink" href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer">
-                    <p className="Linkedin" ><FiLinkedin/></p>
-                </p>
-                <p className="HeadLink" href="https://github.com/dariusz8" target="_blank" rel="noopener noreferrer">
-                    <p className="Github" ><FiGithub/></p>
-                </p>
-                <p className="HeadLink" href="mailto:dariusz.czeczuk@hotmail.com">
-                    <p className="Email" ><TfiEmail/></p>
-                </p>
-            </div>
                 </div>
                 {
                     menuActive &&
