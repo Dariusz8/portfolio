@@ -22,14 +22,14 @@ const UiControl = () => {
     return(
         <div>
             {sunOn &&
-            <button className="ModeButton"  onClick={handleDarkMode}>
+            <button className="ModeButton"  onMouseDown={handleDarkMode}>
                 <p className="DarkModeButton">
                     <BsFillMoonStarsFill/>
                 </p>
             </button>
             }
             {nightOn &&
-            <button className="ModeButton"  onClick={handleSunMode}>
+            <button className="ModeButton"  onMouseDown={handleSunMode}>
                 <p className="SunModeButton">
                     <BsFillSunFill/>
                 </p>

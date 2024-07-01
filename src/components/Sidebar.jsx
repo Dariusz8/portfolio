@@ -19,7 +19,7 @@ const Sidebar = () => {
         <div>
             {sunOn &&
                 <div className="HeadLinks" >
-                    <button className="MenuButton"  onClick={toggleMenu}>
+                    <button className="MenuButton"  onMouseDown={toggleMenu}>
                         <RiMenuUnfoldLine/>
                     </button>
                     <p className="HeadLink"  href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer">
@@ -41,7 +41,7 @@ const Sidebar = () => {
             }
             {nightOn &&
                 <div className="NightHeadLinks" >
-                    <div className="NightMenuButton"  onClick={toggleMenu}>
+                    <div className="NightMenuButton"  onMouseDown={toggleMenu}>
                         <RiMenuUnfoldLine/>
                     </div>
                     <p className="HeadLink" href="https://www.linkedin.com/in/dariusz-czeczuk/" target="_blank" rel="noopener noreferrer">

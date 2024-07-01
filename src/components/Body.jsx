@@ -35,16 +35,14 @@ const Body = () => {
             <UiControl/>
             <Sidebar/>
             {
-                sunOn &&
+            sunOn &&
                 <div className="WholeScreen" >
-                    <>
-                    </>
                     {
-                        menuActive &&
+                    menuActive &&
                 <div className="ButtonsRow" >
-                    <div className="AboutButton"  onClick={handleAboutClick}>About</div>
-                    <div className="ProjectsButton"  onClick={handleProjectsClick}>Projects</div>
-                    <div className="SkillsButton"  onClick={handleSkillsClick}>Skills</div>
+                    <div className="AboutButton"  onMouseDown={handleAboutClick}>About</div>
+                    <div className="ProjectsButton" onMouseDown={handleProjectsClick}>Projects</div>
+                    <div className="SkillsButton"  onMouseDown={handleSkillsClick}>Skills</div>
                 </div>
                     }
                 <div className="WholeContent" >
@@ -72,9 +70,9 @@ const Body = () => {
                 {
                     menuActive &&
                     <div className="ButtonsRow" >
-                        <div className="NightAboutButton"  onClick={handleAboutClick} >About</div>
-                        <div className="NightProjectsButton"  onClick={handleProjectsClick} >Projects</div>
-                        <div className="NightSkillsButton"  onClick={handleSkillsClick} >Skills</div>
+                        <div className="NightAboutButton"  onMouseDown={handleAboutClick} >About</div>
+                        <div className="NightProjectsButton"  onMouseDown={handleProjectsClick} >Projects</div>
+                        <div className="NightSkillsButton"  onMouseDown={handleSkillsClick} >Skills</div>
                     </div>
                 }
                 <div className="NightMode WholeContent">
