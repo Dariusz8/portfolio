@@ -1,0 +1,28 @@
+.ModeButton{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: transparent;
+    width:3%;
+    height:3%;
+    position: fixed;
+    top:4vh;
+    left:2vw;
+    border:none;
+    z-index: 10;
+    font-size:2em;
+    min-width: 0;
+}
+.ModeButton:hover{
+    cursor:pointer;
+    scale: 1.25;
+}
+
+.SunModeButton{
+    color: white;
+    min-width: 0;
+}
+
+.DarkModeButton{
+    color: black;
+    min-width: 0;
+}

@@ -3,28 +3,17 @@ import '../Body.css';
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { BsFillSunFill } from "react-icons/bs";
 import {FiLinkedin} from "react-icons/fi";
 import {FiGithub} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
 import {RiMenuUnfoldLine} from "react-icons/ri";
 import { MyStateContext } from "./App";
+import UiControl from "./UiControl";
 
 const Body = () => {
 
     const {aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive, setSkillsActive,
-        nightOn,setNightOn,sunOn, setSunOn, menuActive, setMenuActive} = useContext(MyStateContext);
-
-    const handleDarkMode = () => {
-        setSunOn(false);
-        setNightOn(true);
-    }
-
-    const handleSunMode = () => {
-        setNightOn(false);
-        setSunOn(true);
-    }
+        nightOn,sunOn,menuActive,setMenuActive} = useContext(MyStateContext);
 
     const handleAboutClick = () => {
         setProjectsActive(false);
@@ -50,6 +39,7 @@ const Body = () => {
 
     return(
         <div className="DaBody" >
+            <UiControl/>
             {
                 sunOn &&
                 <div className="WholeScreen" >
@@ -75,13 +65,6 @@ const Body = () => {
                     <div className="SkillsButton"  onClick={handleSkillsClick}>Skills</div>
                 </div>
                     }
-                
-                <button className="ModeButton"  onClick={handleDarkMode}>
-                    <p className="DarkModeButton">
-                        <BsFillMoonStarsFill/>
-                    </p>
-                </button>
-
                 <div className="WholeContent" >
                 <div className="AboutSection" >
                     {
@@ -100,7 +83,6 @@ const Body = () => {
                 </div>
             </div>
             }
-
             {nightOn &&
             <div className="NightWholeScreen"  >
                 <div>
@@ -127,12 +109,6 @@ const Body = () => {
                         <div className="NightSkillsButton"  onClick={handleSkillsClick} >Skills</div>
                     </div>
                 }
-                
-
-                <button className="ModeButton" onClick={handleSunMode}>
-                <p className="SunModeButton" ><BsFillSunFill /></p>
-                </button>
-
                 <div className="NightMode WholeContent">
             <div className="AboutSection"  >
                 {
