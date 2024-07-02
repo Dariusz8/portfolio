@@ -59,24 +59,3 @@
     text-decoration: none;
     min-width: 0;
 }
-
-.MenuButton{
-    background-color: transparent;
-    border: none;
-    font-size:2em;
-}
-.MenuButton:hover{
-    cursor: pointer;
-    scale:2;
-}
-
-.NightMenuButton{
-    background-color: transparent;
-    border: none;
-    font-size:2em;
-    color:white;
-}
-.NightMenuButton:hover{
-    cursor: pointer;
-    scale:2;
-}
