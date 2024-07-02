@@ -10,12 +10,11 @@ function App() {
   const [skillsActive, setSkillsActive] = useState(false);
   const [nightOn, setNightOn] = useState(false);
   const [sunOn, setSunOn] = useState(true);
-  const [menuActive, setMenuActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('english');
 
   return (
     <MyStateContext.Provider value ={{aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive,
-      setSkillsActive,nightOn,setNightOn,sunOn,setSunOn,menuActive,setMenuActive,selectedLanguage,setSelectedLanguage}}>
+      setSkillsActive,nightOn,setNightOn,sunOn,setSunOn,selectedLanguage,setSelectedLanguage}}>
     <Body/>
     </MyStateContext.Provider>
   );
