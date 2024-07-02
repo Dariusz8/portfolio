@@ -10,7 +10,7 @@ function App() {
   const [skillsActive, setSkillsActive] = useState(false);
   const [nightOn, setNightOn] = useState(false);
   const [sunOn, setSunOn] = useState(true);
-  const [selectedLanguage, setSelectedLanguage] = useState('english');
+  const [selectedLanguage, setSelectedLanguage] = useState('En');
 
   return (
     <MyStateContext.Provider value ={{aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive,
