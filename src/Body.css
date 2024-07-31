@@ -4,6 +4,10 @@
     position: fixed;
 }
 
+.NightFont{
+    color:white;
+}
+
 .WholeScreen {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
