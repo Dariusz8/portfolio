@@ -62,15 +62,13 @@
     min-width: 0;
 }
 
-/*UNDER trying to have underline animation */
-
 .NightAboutButton{
     background-color:transparent;
     font-size:2em;
     border:none;
     color:white;
 }
-.NightAboutButton::after{
+/* .NightAboutButton::after{
     content: "";
     position: absolute;
     left: 7vw;
@@ -86,7 +84,7 @@
 }
 .NightAboutButton:hover{
     cursor: pointer;
-}
+} */
 
 .NightProjectsButton{
     background-color:transparent;
@@ -94,7 +92,7 @@
     border:none;
     color:white;
 }
-.NightProjectsButton::after{
+/* .NightProjectsButton::after{
     content: "";
     position: absolute;
     left: 24vw;
@@ -110,7 +108,7 @@
 }
 .NightProjectsButton:hover{
     cursor: pointer;
-}
+} */
 
 .NightSkillsButton{
     background-color:transparent;
@@ -118,7 +116,7 @@
     border:none;
     color:white;
 }
-.NightSkillsButton::after{
+/* .NightSkillsButton::after{
     content: "";
     position: absolute;
     left: 41vw;
@@ -134,7 +132,7 @@
 }
 .NightSkillsButton:hover{
     cursor: pointer;
-}
+} */
 
 .AboutButton{
     background-color:transparent;
@@ -142,7 +140,7 @@
     border:none;
     color:black;
 }
-.AboutButton::after{
+/* .AboutButton::after{
     content: "";
     position: absolute;
     left: 7vw;
@@ -158,7 +156,7 @@
 }
 .AboutButton:hover{
     cursor: pointer;
-}
+} */
 
 .ProjectsButton{
     background-color:transparent;
@@ -166,7 +164,7 @@
     border:none;
     color:black;
 }
-.ProjectsButton::after{
+/* .ProjectsButton::after{
     content: "";
     position: absolute;
     left: 24vw;
@@ -182,7 +180,7 @@
 }
 .ProjectsButton:hover{
     cursor: pointer;
-}
+} */
 
 .SkillsButton{
     background-color:transparent;
@@ -190,7 +188,7 @@
     border:none;
     color:black;
 }
-.SkillsButton::after{
+/* .SkillsButton::after{
     content: "";
     position: absolute;
     left: 41vw;
@@ -206,4 +204,4 @@
 }
 .SkillsButton:hover{
     cursor: pointer;
-}
+} */
