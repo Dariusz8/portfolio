@@ -41,14 +41,12 @@
 .ButtonsRow{
     grid-column: 1 / 7;
     grid-row: 2 / 3;
-    position:fixed;
     background-color: transparent;
-    top:21vh;
-    left:20vw;
-    width:60%;
     display: flex;
     justify-content: space-evenly;
     z-index: 1;
+    flex-wrap: wrap;
+    font-size: calc(10px + 1vw);
 }
 
 .AboutSection{
