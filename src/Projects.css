@@ -20,6 +20,17 @@
     transform: scale(1.1);
 }
 
+.StrukturaProject {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10%;
+    min-width: 0;
+}
+.StrukturaProject:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .BootGroup{
     text-align: center;
     background-position-y: 29%;

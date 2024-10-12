@@ -11,6 +11,7 @@ const Projects = () => {
         }
     })
 
+    const strukturaScreenShot = cld.image('struktura_project/STRUKTURA');
     const starpathScreenShot = cld.image('starpath_screenshot');
 
     const redirectToExternalURL = (url) =>{
@@ -19,6 +20,7 @@ const Projects = () => {
     
     return(
         <div className="ProjectsContainer" >
+            <AdvancedImage className="StrukturaProject" cldImg={strukturaScreenShot} onClick={() => redirectToExternalURL("https://struktura.design")}/>
             <AdvancedImage className="StarWarsProject" cldImg={starpathScreenShot} onClick={() => redirectToExternalURL("https://share.vidyard.com/watch/Vb8SfnwqnrtSNL93ZNeyiV?")}/>
             <div className="BootGroup" onClick={() => redirectToExternalURL("https://github.com/Dariusz8/groupProjectECommerce")} >Group Project</div>
         </div>

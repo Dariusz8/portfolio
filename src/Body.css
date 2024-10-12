@@ -68,23 +68,10 @@
     border:none;
     color:white;
 }
-/* .NightAboutButton::after{
-    content: "";
-    position: absolute;
-    left: 7vw;
-    bottom: -2px;
-    width: 20%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-.NightAboutButton:hover::after{
-    transform: scaleX(1);
-}
+
 .NightAboutButton:hover{
     cursor: pointer;
-} */
+} 
 
 .NightProjectsButton{
     background-color:transparent;
@@ -92,23 +79,10 @@
     border:none;
     color:white;
 }
-/* .NightProjectsButton::after{
-    content: "";
-    position: absolute;
-    left: 24vw;
-    bottom: -2px;
-    width: 20%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-.NightProjectsButton:hover::after{
-    transform: scaleX(1);
-}
+
 .NightProjectsButton:hover{
     cursor: pointer;
-} */
+}
 
 .NightSkillsButton{
     background-color:transparent;
@@ -116,23 +90,10 @@
     border:none;
     color:white;
 }
-/* .NightSkillsButton::after{
-    content: "";
-    position: absolute;
-    left: 41vw;
-    bottom: -2px;
-    width: 20%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-.NightSkillsButton:hover::after{
-    transform: scaleX(1);
-}
+
 .NightSkillsButton:hover{
     cursor: pointer;
-} */
+}
 
 .AboutButton{
     background-color:transparent;
@@ -140,23 +101,10 @@
     border:none;
     color:black;
 }
-/* .AboutButton::after{
-    content: "";
-    position: absolute;
-    left: 7vw;
-    bottom: -2px;
-    width: 20%;
-    height: 2px;
-    background-color: black;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-.AboutButton:hover::after{
-    transform: scaleX(1);
-}
+
 .AboutButton:hover{
     cursor: pointer;
-} */
+}
 
 .ProjectsButton{
     background-color:transparent;
@@ -164,23 +112,10 @@
     border:none;
     color:black;
 }
-/* .ProjectsButton::after{
-    content: "";
-    position: absolute;
-    left: 24vw;
-    bottom: -2px;
-    width: 20%;
-    height: 2px;
-    background-color: black;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-.ProjectsButton:hover::after{
-    transform: scaleX(1);
-}
+
 .ProjectsButton:hover{
     cursor: pointer;
-} */
+}
 
 .SkillsButton{
     background-color:transparent;
@@ -188,20 +123,7 @@
     border:none;
     color:black;
 }
-/* .SkillsButton::after{
-    content: "";
-    position: absolute;
-    left: 41vw;
-    bottom: -2px;
-    width: 20%;
-    height: 2px;
-    background-color: black;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-.SkillsButton:hover::after{
-    transform: scaleX(1);
-}
+
 .SkillsButton:hover{
     cursor: pointer;
-} */
+}
