@@ -12,7 +12,7 @@ const About = () => {
             Hello World! 
         </h2>
         <p className="AboutText">
-            As a passionate and versatile professional with a B.Sc. in Cell and Molecular Biology and a bootcamp in full-stack web development, I am excited to transition into a field that offers constant new tasks, challenges, and opportunities for growth. Through my work as a lab technician, I honed my attention to detail, multitasking abilities, and effectiveness in a team-based environment. Recognizing the potential of emerging technology in various industries, I pursued web development, gaining proficiency in both front-end and back-end development. I look forward to contributing my diverse skill set and passion for science and technology to a team that values continual learning and the pursuit of impactful outcomes for others.
+            As a passionate and versatile professional with a B.Sc. in Cell and Molecular Biology and the completion of a bootcamp in full-stack web development, I am excited to transition into a field that offers constant new tasks, challenges, and opportunities for growth. Through my work as a lab technician, I honed my attention to detail, multitasking abilities, and effectiveness in a team-based environment. Recognizing the potential of emerging technology in various industries, I pursued web development, gaining proficiency in both front-end and back-end development. I look forward to contributing my diverse skill set and passion for science and technology to a team that values continual learning and the pursuit of impactful outcomes for others.
         </p>
         </>
 
