@@ -12,7 +12,9 @@ const About = () => {
             Hello World! 
         </h2>
         <p className="AboutText">
-            As a passionate and versatile professional with a B.Sc. in Cell and Molecular Biology and the completion of a bootcamp in full-stack web development, I am excited to transition into a field that offers constant new tasks, challenges, and opportunities for growth. Through my work as a lab technician, I honed my attention to detail, multitasking abilities, and effectiveness in a team-based environment. Recognizing the potential of emerging technology in various industries, I pursued web development, gaining proficiency in both front-end and back-end development. I look forward to contributing my diverse skill set and passion for science and technology to a team that values continual learning and the pursuit of impactful outcomes for others.
+            As a dedicated professional with a B.Sc. in Cell and Molecular Biology and a passion for advancing science, I bring a unique blend of laboratory expertise and technical proficiency to the field of clinical research coordination in biobanking. My experience as a lab technician has refined my attention to detail, multitasking abilities, and teamwork skills, all essential for managing complex sample collections and maintaining high-quality standards in biobanking.
+            <p>Recognizing the transformative role of technology in research, I completed a full-stack web development bootcamp, equipping me with the skills to streamline data management processes and enhance operational efficiency. I am excited to leverage this combination of scientific knowledge and technical capability to support the growth of biobanking initiatives, ensuring accurate sample handling, robust data integration, and meaningful contributions to impactful research outcomes.</p>
+            <p>I thrive in dynamic environments that encourage continual learning and innovation and look forward to contributing to the RI-MUHC and their 2030 vision.</p>
         </p>
         </>
 
@@ -22,8 +24,11 @@ const About = () => {
             Bonjour le monde!
         </h2>
         <p className="AboutText">
-        En tant que professionnel passionné et polyvalent avec une licence en biologie cellulaire et moléculaire et une formation en développement web full-stack, je suis enthousiaste à l'idée de me lancer dans un domaine offrant des tâches nouvelles, des défis et des opportunités de croissance constants. Grâce à mon travail de technicien de laboratoire, j'ai affiné mon attention aux détails, ma capacité à multitâcher et mon efficacité dans un environnement de travail en équipe. Reconnaissant le potentiel des technologies émergentes dans divers secteurs, j'ai poursuivi le développement web, acquérant une expertise en développement front-end et back-end. Je suis impatient de contribuer à une équipe valorisant l'apprentissage continu et la recherche de résultats impactants pour les autres grâce à mon ensemble de compétences diversifiées et ma passion pour la science et la technologie.
+        En tant que professionnel dévoué titulaire d’un B.Sc. en biologie cellulaire et moléculaire et passionné par l’avancement des sciences, j’apporte une combinaison unique d’expertise en laboratoire et de compétences techniques au domaine de la coordination de la recherche clinique en biobanque. Mon expérience en tant que technicien de laboratoire a affiné mon souci du détail, mes capacités à gérer plusieurs tâches simultanément et mes compétences en travail d’équipe, toutes essentielles pour gérer des collections d’échantillons complexes et maintenir des normes de qualité élevées en biobanque.
         </p>
+        <p className="AboutText">Reconnaissant le rôle transformateur de la technologie dans la recherche, j’ai complété un bootcamp de développement web full-stack, me dotant des compétences nécessaires pour optimiser les processus de gestion des données et améliorer l’efficacité opérationnelle. Je suis enthousiaste à l’idée de tirer parti de cette combinaison de connaissances scientifiques et de capacités techniques pour soutenir la croissance des initiatives en biobanque, en garantissant une gestion précise des échantillons, une intégration robuste des données et des contributions significatives à des résultats de recherche impactants.
+        </p>
+        <p className="AboutText">Je m’épanouis dans des environnements dynamiques favorisant l’apprentissage continu et l’innovation, et j’ai hâte de contribuer au CUSM et à leur vision pour 2030</p>
         </>
 
     const PlAbout = () => 
@@ -32,7 +37,13 @@ const About = () => {
             Witaj, świecie! 
         </h2>
         <p className="AboutText">
-        Jako pasjonat i wszechstronny profesjonalista z tytułem licencjata w dziedzinie biologii komórkowej i molekularnej oraz po bootcampie z pełnego stosu rozwoju webowego, jestem podekscytowany możliwością przejścia do dziedziny, która oferuje ciągłe nowe zadania, wyzwania i możliwości rozwoju. Pracując jako technik laboratoryjny, udoskonaliłem swoją dbałość o szczegóły, zdolność do multitaskingu oraz skuteczność w pracy zespołowej. Dostrzegając potencjał technologii w różnych branżach, postanowiłem rozwijać się w kierunku web developmentu, zdobywając biegłość zarówno w front-endzie, jak i back-endzie. Z niecierpliwością czekam na możliwość wniesienia mojego zróżnicowanego zestawu umiejętności oraz pasji do nauki i technologii do zespołu, który ceni ciągłe uczenie się i dążenie do osiągania pomocnych wyników dla innych.
+            Jako oddany profesjonalista z tytułem licencjata nauk ścisłych (B.Sc.) w dziedzinie biologii komórkowej i molekularnej oraz pasją do rozwoju nauki, wnoszę unikalne połączenie wiedzy laboratoryjnej i umiejętności technicznych do obszaru koordynacji badań klinicznych w biobankowaniu. Moje doświadczenie jako technika laboratoryjnego pozwoliło mi udoskonalić dbałość o szczegóły, zdolności do wielozadaniowości oraz umiejętność pracy zespołowej – cechy kluczowe w zarządzaniu złożonymi kolekcjami próbek i utrzymywaniu wysokich standardów jakości w biobankowaniu.
+        </p>
+        <p className="AboutText">
+            Uznając rolę technologii w badaniach, ukończyłem intensywny kurs programowania full-stack, zdobywając umiejętności pozwalające na optymalizację procesów zarządzania danymi i poprawę efektywności operacyjnej. Z entuzjazmem zamierzam wykorzystać tę kombinację wiedzy naukowej i zdolności technicznych, aby wspierać rozwój inicjatyw biobankowania, zapewniając precyzyjne zarządzanie próbkami, solidną integrację danych i znaczący wkład w osiąganie ważnych wyników badawczych.
+        </p>
+        <p className="AboutText">
+            Dobrze odnajduję się w dynamicznych środowiskach, które sprzyjają ciągłemu uczeniu się i innowacjom, i z niecierpliwością czekam na możliwość wniesienia swojego wkładu w CUSM i ich wizję na rok 2030.
         </p>
         </>
 
@@ -42,8 +53,15 @@ const About = () => {
             ¡Hola, mundo! 
         </h2>
         <p className="AboutText">
-            Como profesional apasionado y versátil con una licenciatura en Biología Celular y Molecular y un bootcamp en desarrollo web full-stack, estoy emocionado de hacer la transición a un campo que ofrece nuevas tareas, desafíos y oportunidades de crecimiento constantes. A través de mi trabajo como técnico de laboratorio, perfeccioné mi atención al detalle, la multitarea y la eficacia en un entorno de trabajo en equipo. Reconociendo el potencial de las tecnologías emergentes en diversas industrias, me dediqué al desarrollo web, adquiriendo competencia tanto en el desarrollo front-end como back-end. Espero contribuir con mi diverso conjunto de habilidades y mi pasión por la ciencia y la tecnología a un equipo que valore el aprendizaje continuo y la búsqueda de resultados impactantes para los demás.
+            Como profesional comprometido con un título de B.Sc. en Biología Celular y Molecular y una pasión por el avance de la ciencia, aporto una combinación única de experiencia en laboratorio y competencias técnicas al campo de la coordinación de investigaciones clínicas en biobancos. Mi experiencia como técnico de laboratorio ha perfeccionado mi atención al detalle, mis habilidades para la multitarea y mi capacidad de trabajo en equipo, todas esenciales para gestionar colecciones complejas de muestras y mantener altos estándares de calidad en los biobancos.
         </p>
+        <p className="AboutText">
+            Reconociendo el papel de la tecnología en la investigación, completé un bootcamp de desarrollo web full-stack, lo que me dotó de las habilidades necesarias para optimizar los procesos de gestión de datos y mejorar la eficiencia operativa. Estoy entusiasmado por aprovechar esta combinación de conocimientos científicos y capacidades técnicas para apoyar el crecimiento de las iniciativas de biobancos, asegurando un manejo preciso de muestras, una integración sólida de datos y contribuciones significativas a resultados de investigación impactantes.
+        </p>
+        <p className="AboutText">
+            Me desenvuelvo en entornos dinámicos que fomentan el aprendizaje continuo y la innovación, y espero con entusiasmo contribuir al CUSM y a su visión para 2030.
+        </p>
+
         </>
 
     return(

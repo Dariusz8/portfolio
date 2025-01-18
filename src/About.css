@@ -5,6 +5,7 @@
     left:30vw;
     top:37vh;
     overflow-y: scroll;
+    margin-bottom: 5px;
 }
 
 .AboutHeader{
@@ -14,5 +15,5 @@
 .AboutText{
     text-indent: 3vw;
     font-size: 1.25em;
-    min-width: 0;   
+    min-width: 0; 
 }
