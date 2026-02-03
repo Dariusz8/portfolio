@@ -11,10 +11,15 @@ function App() {
   const [nightOn, setNightOn] = useState(false);
   const [sunOn, setSunOn] = useState(true);
   const [selectedLanguage, setSelectedLanguage] = useState('En');
+  const [moreMe, setMoreMe] = useState(false);
+  const [biobanking, setBiobanking] = useState(false);
+  const [sop, setSop] = useState(false);
+  const [viability, setViability] = useState(false);
 
   return (
     <MyStateContext.Provider value ={{aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive,
-      setSkillsActive,nightOn,setNightOn,sunOn,setSunOn,selectedLanguage,setSelectedLanguage}}>
+      setSkillsActive,nightOn,setNightOn,sunOn,setSunOn,selectedLanguage,setSelectedLanguage,
+      moreMe, setMoreMe, biobanking, setBiobanking, sop, setSop, viability, setViability}}>
     <Body/>
     </MyStateContext.Provider>
   );

@@ -18,13 +18,15 @@ const MoreMe = () => {
         <>
         <h2>Articles of interest</h2>
         <div>
-            Biobanking
-        </div>
-        <div>
-            SOP
-        </div>
-        <div>
-            Viability
+            <div onMouseDown={handleBiobankingClick}>
+                Biobanking
+            </div>
+            <div onMouseDown={handleSOPClick}>
+                SOP
+            </div>
+            <div onMouseDown={handleViabilityClick}>
+                Viability
+            </div>
         </div>
         </>
     )
