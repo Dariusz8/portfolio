@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import '../About.css';
 import { MyStateContext } from "./App";
+import MoreMe from './MoreMe';
 
 const About = () => {
 
@@ -69,6 +70,7 @@ const About = () => {
 
     return(
         <div className="AllAboutContent">
+            {moreMe && <MoreMe/>}
             {selectedLanguage === 'En' && <EnAbout/>}
             {selectedLanguage === 'Fr' && <FrAbout/>}
             {selectedLanguage === 'Pl' && <PlAbout/>}

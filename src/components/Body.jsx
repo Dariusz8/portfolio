@@ -10,24 +10,27 @@ import Sidebar from "./Sidebar";
 const Body = () => {
 
     const {aboutActive,setAboutActive,projectsActive,setProjectsActive,skillsActive, setSkillsActive,
-        nightOn,sunOn,selectedLanguage} = useContext(MyStateContext);
+        nightOn,sunOn,selectedLanguage,setMoreMe} = useContext(MyStateContext);
 
     const handleAboutClick = () => {
         setProjectsActive(false);
         setSkillsActive(false);
         setAboutActive(true);
+        setMoreMe(false);
     };
     
     const handleProjectsClick = () => {
         setAboutActive(false);
         setSkillsActive(false);
         setProjectsActive(true);
+        setMoreMe(false);
     };
     
     const handleSkillsClick = () => {
         setAboutActive(false);
         setProjectsActive(false);
         setSkillsActive(true);
+        setMoreMe(false);
     };
 //TODO the headings not being white in dark mode + (take off animation)
     const EngHeadings = () => 
