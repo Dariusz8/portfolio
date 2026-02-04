@@ -3,6 +3,9 @@
     margin-bottom: 10px;
     border-left: 4px solid #4f46e5;
     background: #f9fafb;
+    opacity: 0.85;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
   }
   
   .article-card a {
