@@ -1,0 +1,17 @@
+.article-card {
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4f46e5;
+    background: #f9fafb;
+  }
+  
+  .article-card a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 500;
+  }
+  
+  .article-card a:hover {
+    text-decoration: underline;
+  }
+  

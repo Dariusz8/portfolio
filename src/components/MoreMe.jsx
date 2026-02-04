@@ -1,6 +1,7 @@
 import React, { useContext} from "react";
 import '../MoreMe.css';
 import { MyStateContext } from "./App";
+import ArticleList from "./BiobankingArticles";
 
 const MoreMe = () => {
 
@@ -83,6 +84,9 @@ const MoreMe = () => {
             {selectedLanguage === 'Fr' && <FrCategories/>}
             {selectedLanguage === 'Pl' && <PlCategories/>}
             {selectedLanguage === 'Esp' && <EsCategories/>}
+        </div>
+        <div>
+            {biobanking && <ArticleList/>}
         </div>
         </>
     )
