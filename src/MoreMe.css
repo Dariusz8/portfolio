@@ -1,0 +1,9 @@
+.ArticleCategory{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.CategoryOption:hover{
+    cursor: pointer;
+}

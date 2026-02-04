@@ -17,16 +17,16 @@ const MoreMe = () => {
     return(
         <>
         <h2>Articles of interest</h2>
-        <div>
-            <div onMouseDown={handleBiobankingClick}>
+        <div className="ArticleCategory">
+            <h3 className="CategoryOption" onMouseDown={handleBiobankingClick}>
                 Biobanking
-            </div>
-            <div onMouseDown={handleSOPClick}>
+            </h3>
+            <h3 className="CategoryOption" onMouseDown={handleSOPClick}>
                 SOP
-            </div>
-            <div onMouseDown={handleViabilityClick}>
+            </h3>
+            <h3 className="CategoryOption" onMouseDown={handleViabilityClick}>
                 Viability
-            </div>
+            </h3>
         </div>
         </>
     )
