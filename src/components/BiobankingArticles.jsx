@@ -112,9 +112,125 @@ const articles = [
         "Advancing Wildlife Conservation Through Biobanking in South America (2025)",
       url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12649330/",
     },
+    {
+        title:
+          "Cancers Compared to Paired Formalin-Fixed Paraffin-Embedded Tissues (2025)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12652624/#sec4-ijms-26-11038",
+      },
+      {
+        title:
+          "Establishment of Immune Biobank for Vaccine Immunogenicity Prediction Using In Vitro and In Silico Methods Against Porcine Reproductive and Respiratory Syndrome Virus (2025)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12567839/",
+      },
+      {
+        title:
+          "Decentralized Biobanking to Empower Patient Engagement in Biospecimen Research: Operational Feasibility Case Study (2025)",
+        url: "https://www.liebertpub.com/doi/10.1177/19475535251384429",
+      },
+      {
+        title:
+          "A Framework for Evaluation of New Processing Technologies in Human Milk Banking (2025)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12508634/",
+      },
+      {
+        title:
+          "Advancing Ethical Biobanking Through Evolving International Codes: A Call to Action",
+        url: "https://www.liebertpub.com/doi/10.1177/19475535251384652",
+      },
+      {
+        title:
+          "Development of a Big Data Platform for Collecting and Utilizing Clinical Information from the Korea Biobank Network (2025)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12505599/#Sec12",
+      },
+      {
+        title: "Culling Decision Tools for Biobankers (2025)",
+        url: "https://www.liebertpub.com/doi/epub/10.1177/19475535251388770",
+      },
+      {
+        title:
+          "A Quantitative Tool for Culling Collections of Human Specimens: Proof of Concept (2025)",
+        url: "https://www.liebertpub.com/doi/10.1177/19475535251362092",
+      },
+      {
+        title:
+          "Patient-Derived Organoid Biobanks for Translational Research and Precision Medicine: Challenges and Future Perspectives (2025)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12387782/",
+      },
+      {
+        title: "Biobank: What's in a Name? (2019)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7065495/",
+      },
+      {
+        title:
+          "Biobank and Data Silos into a Data Commons: Convergence to Support Translational Medicine (2021)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8645144/",
+      },
+      {
+        title:
+          "LIMS Table – Biobank and Data Silos into a Data Commons (Figure 1)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8645144/figure/Fig1/",
+      },
+      {
+        title: "An Introduction to Starting a Biobank (2020)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6777713/",
+      },
+      {
+        title:
+          "An Introduction to Hardware, Software, and Other Information Technology Needs of Biomedical Biobanks (2020)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6777721/",
+      },
+      {
+        title:
+          "An Approach to Evaluate the Costs and Outputs of Academic Biobanks (2024)",
+        url: "https://www.liebertpub.com/doi/10.1089/bio.2023.0112",
+      },
+      {
+        title:
+          "Transformation of the Taiwan Biobank 3.0: Vertical and Horizontal Integration (2020)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7406956/",
+      },
+      {
+        title:
+          "Taiwan Biobank 3.0 Integration Framework – Benchmarking Against UK Biobank (Figure 3)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7406956/figure/Fig3/",
+      },
+      {
+        title:
+          "Aspects of Modern Biobank Activity: Comprehensive Review (2018)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6132819/",
+      },{
+        title:
+          "Revolutionizing Cancer Research: The Impact of Artificial Intelligence in Digital Biobanking (2023)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10532470/",
+      },
+      {
+        title:
+          "Standardizing Digital Biobanks: Integrating Imaging, Genomic, and Clinical Data for Precision Medicine (2024)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10845786/",
+      },
+      {
+        title:
+          "Biobanking in the Digital Pathology Era (2022)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10207967/",
+      },
+      {
+        title:
+          "A Survey on the Role of Artificial Intelligence in Biobanking Studies: A Systematic Review (2022)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9140088/#sec4-diagnostics-12-01179",
+      },
+      {
+        title:
+          "Pediatric Biobanks to Enhance Clinical and Translational Research for Children (2023)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9871420/",
+      },
+      {
+        title:
+          "The Estonian Biobank’s Journey from Biobanking to Personalized Medicine (2025)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11972354/",
+      },            
   ];
 
-  export default function ArticleList() {
+  export default function BiobankingArticles() {
     return (
       <div className="article-list">
         {articles.map((article, index) => (
